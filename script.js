@@ -37,7 +37,21 @@ const products = [
     }
 ];
 
-let cart = JSON.parse(localStorage.getItem("byNightCart")) || [];
+let cart = [];
+
+try {
+    const storedCart = JSON.parse(localStorage.getItem("byNightCart"));
+
+    if (Array.isArray(storedCart)) {
+        cart = storedCart.filter(item => {
+            return item && Number.isInteger(item.id) &&
+                Number.isFinite(item.price) &&
+                Number.isInteger(item.quantity) && item.quantity > 0;
+        });
+    }
+} catch (error) {
+    localStorage.removeItem("byNightCart");
+}
 
 const cartPanel = document.getElementById("cartPanel");
 const cartOverlay = document.getElementById("cartOverlay");
