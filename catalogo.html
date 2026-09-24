@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Catálogo | By Night</title>
+    <meta name="description" content="Catálogo de pijamas femeninas By Night en piel de durazno.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="header">
+
+        <div class="container header-container">
+
+            <a href="#inicio" class="logo">
+                <span class="logo-main">By Night</span>
+                <span class="logo-sub">Pijamas femeninas</span>
+            </a>
+            <nav class="nav" id="nav">
+                <a href="index.html">Inicio</a>
+                <a href="catalogo.html" class="active">Catálogo</a>
+                <a href="index.html#nosotros">Nosotras</a>
+                <a href="index.html#contacto">Contacto</a>
+            </nav>
+
+            <div class="header-actions">
+
+                <button class="cart-button" id="openCart" aria-label="Abrir carrito">
+                    <span class="cart-icon">🛍</span>
+                    <span class="cart-text">Carrito</span>
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+
+                <button class="menu-button" id="menuButton" aria-label="Abrir menú">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+    <main>
+
+        <section class="catalog-hero">
+
+            <div class="container">
+
+                <span class="section-label">
+                    BY NIGHT
+                </span>
+
+                <h1>
+                    Nuestro catálogo
+                </h1>
+
+                <p>
+                    Descubre nuestras pijamas femeninas en piel de durazno
+                    y encuentra el diseño perfecto para tus noches.
+                </p>
+
+            </div>
+
+        </section>
+
+        <section class="catalog-section">
+
+            <div class="container">
+
+                <div class="catalog-top">
+
+                    <div>
+                        <span class="section-label">
+                            COLECCIÓN
+                        </span>
+
+                        <h2>
+                            Pijamas femeninas
+                        </h2>
+                    </div>
+
+                    <a href="https://wa.me/573229494731?text=Hola%20By%20Night%2C%20quiero%20informaci%C3%B3n%20sobre%20el%20cat%C3%A1logo"
+                       class="btn btn-whatsapp"
+                       target="_blank">
+                        Consultar por WhatsApp
+                    </a>
+
+                </div>
+
+                <div class="product-filters">
+
+                    <button class="filter-button active" data-category="todos">
+                        Todas
+                    </button>
+
+                    <button class="filter-button" data-category="cortas">
+                        Cortas
+                    </button>
+
+                    <button class="filter-button" data-category="largas">
+                        Largas
+                    </button>
+
+                    <button class="filter-button" data-category="estampadas">
+                        Estampadas
+                    </button>
+
+                    <button class="filter-button" data-category="basicas">
+                        Básicas
+                    </button>
+
+                </div>
+
+                <div class="products-grid catalog-grid" id="productsGrid">
+
+                    <article class="product-card" data-category="cortas">
+
+                        <div class="product-image">
+
+                            <span class="product-badge">
+                                Nueva
+                            </span>
+
+                            <img src="img/pijama-rosa.jpg"
+                                 alt="Pijama Rosa Love">
+
+                            <button class="quick-cart"
+                                    data-id="1"
+                                    aria-label="Agregar Pijama Rosa Love">
+                                +
+                            </button>
+
+                        </div>
+
+                        <div class="product-info">
+
+                            <span class="product-category">
+                                Pijama corta
+                            </span>
+
+                            <h3>
+                                Pijama Rosa Love
+                            </h3>
+
+                            <p class="product-description">
+                                Pijama femenina en piel de durazno,
+                                suave, ligera y cómoda.
+                            </p>
+
+                            <div class="product-bottom">
+
+                                <strong>
+                                    $65.000
+                                </strong>
+
+                                <button class="add-cart" data-id="1">
+                                    Agregar
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                    <article class="product-card" data-category="cortas">
+
+                        <div class="product-image">
+
+                            <img src="img/pijama-celeste.jpg"
+                                 alt="Dreamy Celeste">
+
+                            <button class="quick-cart"
+                                    data-id="2"
+                                    aria-label="Agregar Dreamy Celeste">
+                                +
+                            </button>
+
+                        </div>
+
+                        <div class="product-info">
+
+                            <span class="product-category">
+                                Pijama corta
+                            </span>
+
+                            <h3>
+                                Dreamy Celeste
+                            </h3>
+
+                            <p class="product-description">
+                                Diseño delicado con textura suave
+                                y confortable.
+                            </p>
+
+                            <div class="product-bottom">
+
+                                <strong>
+                                    $62.000
+                                </strong>
+
+                                <button class="add-cart" data-id="2">
+                                    Agregar
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                    <article class="product-card" data-category="largas">
+
+                        <div class="product-image">
+
+                            <span class="product-badge">
+                                Favorita
+                            </span>
+
+                            <img src="img/pijama-morada.jpg"
+                                 alt="Lavender Night">
+
+                            <button class="quick-cart"
+                                    data-id="3"
+                                    aria-label="Agregar Lavender Night">
+                                +
+                            </button>
+
+                        </div>
+
+                        <div class="product-info">
+
+                            <span class="product-category">
+                                Pijama larga
+                            </span>
+
+                            <h3>
+                                Lavender Night
+                            </h3>
+
+                            <p class="product-description">
+                                Diseño femenino y elegante
+                                en piel de durazno.
+                            </p>
+
+                            <div class="product-bottom">
+
+                                <strong>
+                                    $70.000
+                                </strong>
+
+                                <button class="add-cart" data-id="3">
+                                    Agregar
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                    <article class="product-card" data-category="estampadas">
+
+                        <div class="product-image">
+
+                            <img src="img/pijama-flores.jpg"
+                                 alt="Floral Dreams">
+
+                            <button class="quick-cart"
+                                    data-id="4"
+                                    aria-label="Agregar Floral Dreams">
+                                +
+                            </button>
+
+                        </div>
+
+                        <div class="product-info">
+
+                            <span class="product-category">
+                                Estampada
+                            </span>
+
+                            <h3>
+                                Floral Dreams
+                            </h3>
+
+                            <p class="product-description">
+                                Estampado floral con textura suave
+                                para descansar.
+                            </p>
+
+                            <div class="product-bottom">
+
+                                <strong>
+                                    $68.000
+                                </strong>
+
+                                <button class="add-cart" data-id="4">
+                                    Agregar
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                    <article class="product-card" data-category="basicas">
+
+                        <div class="product-image">
+
+                            <img src="img/pijama-negra.jpg"
+                                 alt="Black Night">
+
+                            <button class="quick-cart"
+                                    data-id="5"
+                                    aria-label="Agregar Black Night">
+                                +
+                            </button>
+
+                        </div>
+
+                        <div class="product-info">
+
+                            <span class="product-category">
+                                Básica
+                            </span>
+
+                            <h3>
+                                Black Night
+                            </h3>
+
+                            <p class="product-description">
+                                Diseño clásico y versátil
+                                para cualquier noche.
+                            </p>
+
+                            <div class="product-bottom">
+
+                                <strong>
+                                    $65.000
+                                </strong>
+
+                                <button class="add-cart" data-id="5">
+                                    Agregar
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                    <article class="product-card" data-category="estampadas">
+
+                        <div class="product-image">
+
+                            <img src="img/pijama-corazones.jpg"
+                                 alt="Sweet Hearts">
+
+                            <button class="quick-cart"
+                                    data-id="6"
+                                    aria-label="Agregar Sweet Hearts">
+                                +
+                            </button>
+
+                        </div>
+
+                        <div class="product-info">
+
+                            <span class="product-category">
+                                Estampada
+                            </span>
+
+                            <h3>
+                                Sweet Hearts
+                            </h3>
+
+                            <p class="product-description">
+                                Pijama femenina con estampado
+                                de corazones.
+                            </p>
+
+                            <div class="product-bottom">
+
+                                <strong>
+                                    $67.000
+                                </strong>
+
+                                <button class="add-cart" data-id="6">
+                                    Agregar
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="footer">
+
+        <div class="container footer-grid">
+
+            <div class="footer-brand">
+
+                <img src="img/logo.png"
+                     alt="By Night"
+                     class="footer-logo">
+
+                <p>
+                    Pijamas femeninas de piel de durazno
+                    para noches llenas de comodidad.
+                </p>
+
+            </div>
+
+            <div class="footer-links">
+
+                <h3>
+                    Tienda
+                </h3>
+
+                <a href="index.html">
+                    Inicio
+                </a>
+
+                <a href="catalogo.html">
+                    Catálogo
+                </a>
+
+                <a href="index.html#nosotros">
+                    Nosotras
+                </a>
+
+            </div>
+
+            <div class="footer-contact">
+
+                <h3>
+                    Contáctanos
+                </h3>
+
+                <a href="https://wa.me/573229494731"
+                   target="_blank">
+                    WhatsApp
+                </a>
+
+                <a href="https://www.instagram.com/"
+                   target="_blank">
+                    Instagram
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 By Night. Todos los derechos reservados.
+            </p>
+
+        </div>
+
+    </footer>
+
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+    <aside class="cart-panel" id="cartPanel">
+
+        <div class="cart-header">
+
+            <div>
+
+                <span class="section-label">
+                    BY NIGHT
+                </span>
+
+                <h2>
+                    Tu carrito
+                </h2>
+
+            </div>
+
+            <button class="close-cart"
+                    id="closeCart"
+                    aria-label="Cerrar carrito">
+                ×
+            </button>
+
+        </div>
+
+        <div class="cart-items" id="cartItems">
+
+            <div class="empty-cart">
+
+                <span>
+                    🛍
+                </span>
+
+                <h3>
+                    Tu carrito está vacío
+                </h3>
+
+                <p>
+                    Agrega una pijama para comenzar tu compra.
+                </p>
+
+                <button class="btn btn-primary"
+                        id="continueShopping">
+                    Ver catálogo
+                </button>
+
+            </div>
+
+        </div>
+
+        <div class="cart-footer">
+
+            <div class="cart-total">
+
+                <span>
+                    Total
+                </span>
+
+                <strong id="cartTotal">
+                    $0
+                </strong>
+
+            </div>
+
+            <a href="https://wa.me/573229494731"
+               class="checkout-whatsapp"
+               id="checkoutWhatsapp"
+               target="_blank">
+                Finalizar pedido por WhatsApp
+            </a>
+
+        </div>
+
+    </aside>
+
+    <a href="https://wa.me/573229494731?text=Hola%20By%20Night%2C%20quiero%20informaci%C3%B3n%20sobre%20sus%20pijamas"
+       class="whatsapp-float"
+       target="_blank"
+       aria-label="Contactar por WhatsApp">
+        <span>WhatsApp</span>
+    </a>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

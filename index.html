@@ -1,958 +1,617 @@
-```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Creaciones Samu | Pijamas de Piel Durazno</title>
-
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>By Night | Pijamas Femeninas</title>
+    <meta name="description" content="By Night - Pijamas femeninas en piel de durazno, suaves, cómodas y perfectas para descansar.">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
-
-    <style>
-
-        * {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: 'DM Sans', sans-serif;
-        }
-
-        .font-display {
-            font-family: 'Playfair Display', serif;
-        }
-
-        .hero-pattern {
-            background-image:
-                radial-gradient(circle at 10% 20%, rgba(244, 180, 190, 0.20) 0, transparent 28%),
-                radial-gradient(circle at 90% 80%, rgba(221, 190, 210, 0.20) 0, transparent 28%);
-        }
-
-        .card-hover {
-            transition: all 0.35s ease;
-        }
-
-        .card-hover:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(100, 70, 90, 0.12);
-        }
-
-        .float {
-            animation: float 4s ease-in-out infinite;
-        }
-
-        @keyframes float {
-
-            0%, 100% {
-                transform: translateY(0);
-            }
-
-            50% {
-                transform: translateY(-10px);
-            }
-
-        }
-
-        .fade-up {
-            animation: fadeUp 0.8s ease forwards;
-        }
-
-        @keyframes fadeUp {
-
-            from {
-                opacity: 0;
-                transform: translateY(25px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-
-        }
-
-    </style>
-
+    <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="bg-[#fffafa] text-slate-800">
+<body>
 
+    <header class="header" id="inicio">
+        <div class="container header-container">
 
-<header class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-xl border-b border-[#eadde1]">
+            <a href="#inicio" class="logo">
+                <span class="logo-main">By Night</span>
+                <span class="logo-sub">Pijamas femeninas</span>
+            </a>
 
-    <div class="max-w-7xl mx-auto px-5 lg:px-8 h-20 flex items-center justify-between">
+            <nav class="nav" id="nav">
+                <a href="#inicio">Inicio</a>
+                <a href="catalogo.html">Catálogo</a>
+                <a href="#nosotros">Nosotras</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
 
-        <a href="#inicio" class="flex items-center gap-3">
+            <div class="header-actions">
+                <button class="cart-button" id="openCart" aria-label="Abrir carrito">
+                    <span class="cart-icon">🛍</span>
+                    <span class="cart-text">Carrito</span>
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
 
-            <div class="w-11 h-11 rounded-2xl bg-[#b97891] text-white flex items-center justify-center shadow-lg shadow-[#b97891]/20">
-
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-
-                    <path stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="1.8"
-                          d="M6 8.5C6 6 8.7 4 12 4s6 2 6 4.5M5 9h14l-1 11H6L5 9z"/>
-
-                    <path stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="1.8"
-                          d="M9 9c0 2 1.2 3 3 3s3-1 3-3"/>
-
-                </svg>
-
+                <button class="menu-button" id="menuButton" aria-label="Abrir menú">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
-
-
-            <div>
-
-                <p class="text-xl font-extrabold text-slate-900 leading-none">
-
-                    Creaciones
-                    <span class="text-[#b97891]">
-                        Samu
-                    </span>
-
-                </p>
-
-                <p class="text-[10px] uppercase tracking-[0.2em] text-slate-400 font-bold mt-1">
-                    Pijamas de piel durazno
-                </p>
-
-            </div>
-
-        </a>
-
-
-        <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-600">
-
-            <a href="#inicio" class="hover:text-[#b97891] transition">
-                Inicio
-            </a>
-
-            <a href="#coleccion" class="hover:text-[#b97891] transition">
-                Colección
-            </a>
-
-            <a href="#pijamas" class="hover:text-[#b97891] transition">
-                Pijamas
-            </a>
-
-            <a href="#nosotros" class="hover:text-[#b97891] transition">
-                Nosotros
-            </a>
-
-            <a href="#contacto"
-               class="bg-[#b97891] text-white px-5 py-3 rounded-xl hover:bg-[#9f6079] transition shadow-lg shadow-[#b97891]/20">
-
-                Comprar
-
-            </a>
-
-        </nav>
-
-
-        <button id="menu-btn"
-                class="md:hidden w-11 h-11 rounded-xl bg-[#f5e9ed] flex items-center justify-center text-[#8d526a]">
-
-            <svg class="w-6 h-6"
-                 fill="none"
-                 stroke="currentColor"
-                 viewBox="0 0 24 24">
-
-                <path stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M4 6h16M4 12h16M4 18h16"/>
-
-            </svg>
-
-        </button>
-
-    </div>
-
-
-    <div id="mobile-menu"
-         class="hidden md:hidden bg-white border-t border-[#eadde1] px-5 py-5">
-
-        <div class="flex flex-col gap-2">
-
-            <a href="#inicio"
-               class="px-4 py-3 rounded-xl hover:bg-[#f9edf1] hover:text-[#b97891] transition">
-                Inicio
-            </a>
-
-            <a href="#coleccion"
-               class="px-4 py-3 rounded-xl hover:bg-[#f9edf1] hover:text-[#b97891] transition">
-                Colección
-            </a>
-
-            <a href="#pijamas"
-               class="px-4 py-3 rounded-xl hover:bg-[#f9edf1] hover:text-[#b97891] transition">
-                Pijamas
-            </a>
-
-            <a href="#nosotros"
-               class="px-4 py-3 rounded-xl hover:bg-[#f9edf1] hover:text-[#b97891] transition">
-                Nosotros
-            </a>
-
-            <a href="#contacto"
-               class="mt-2 text-center bg-[#b97891] text-white px-4 py-3 rounded-xl font-bold">
-                Comprar
-            </a>
 
         </div>
+    </header>
 
-    </div>
+    <main>
 
-</header>
+        <section class="hero">
+            <div class="container hero-content">
 
+                <div class="hero-text">
+                    <span class="hero-label">BY NIGHT</span>
 
+                    <h1>
+                        Suavidad que
+                        <strong>acompaña tus noches.</strong>
+                    </h1>
 
-<section id="inicio"
-         class="relative min-h-screen pt-32 pb-20 flex items-center overflow-hidden hero-pattern">
+                    <p>
+                        Descubre nuestra colección de pijamas femeninas
+                        en piel de durazno, creadas para brindarte
+                        comodidad y suavidad en cada noche.
+                    </p>
 
-    <div class="max-w-7xl mx-auto px-5 lg:px-8 w-full">
+                    <div class="hero-buttons">
+                        <a href="#catalogo" class="btn btn-primary">
+                            Ver catálogo
+                        </a>
 
-        <div class="grid lg:grid-cols-2 gap-14 items-center">
-
-
-            <div class="text-center lg:text-left fade-up">
-
-                <div class="inline-flex items-center gap-2 bg-[#f9e9ee] border border-[#efd6de] text-[#a55f78] px-4 py-2 rounded-full text-sm font-bold mb-6">
-
-                    <span class="w-2 h-2 bg-[#b97891] rounded-full"></span>
-
-                    Pijamas de piel durazno
-
+                        <a href="https://wa.me/573229494731?text=Hola%20By%20Night%2C%20quiero%20conocer%20la%20colecci%C3%B3n%20de%20pijamas"
+                           class="btn btn-whatsapp"
+                           target="_blank">
+                            Pedir por WhatsApp
+                        </a>
+                    </div>
                 </div>
 
-
-                <h1 class="font-display text-5xl sm:text-6xl lg:text-7xl font-bold text-slate-900 leading-[1.05]">
-
-                    Suavidad que se
-                    <span class="text-[#b97891]">
-                        siente.
-                    </span>
-
-                </h1>
-
-
-                <p class="mt-7 text-lg text-slate-600 leading-relaxed max-w-xl mx-auto lg:mx-0">
-
-                    En <strong class="text-slate-900">Creaciones Samu</strong>
-                    encuentras pijamas de piel durazno suaves,
-                    cómodas y bonitas para disfrutar tus noches
-                    con el máximo confort.
-
-                </p>
-
-
-                <div class="mt-9 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-
-                    <a href="#pijamas"
-                       class="bg-[#b97891] hover:bg-[#9f6079] text-white font-bold px-7 py-4 rounded-xl shadow-xl shadow-[#b97891]/20 transition flex items-center justify-center gap-3">
-
-                        Ver pijamas
-
-                    </a>
-
-
-                    <a href="#contacto"
-                       class="bg-white border border-[#e7d7dd] hover:border-[#c993a6] hover:text-[#b97891] text-slate-700 font-bold px-7 py-4 rounded-xl transition">
-
-                        Hacer pedido
-
-                    </a>
-
-                </div>
-
-
-                <div class="mt-10 flex flex-wrap justify-center lg:justify-start gap-6 text-sm text-slate-500">
-
-                    <div class="flex items-center gap-2">
-
-                        <span class="text-[#b97891]">
-                            ✓
-                        </span>
-
-                        Piel durazno
-
-                    </div>
-
-
-                    <div class="flex items-center gap-2">
-
-                        <span class="text-[#b97891]">
-                            ✓
-                        </span>
-
-                        Diseños bonitos
-
-                    </div>
-
-
-                    <div class="flex items-center gap-2">
-
-                        <span class="text-[#b97891]">
-                            ✓
-                        </span>
-
-                        Diferentes tallas
-
-                    </div>
-
+                <div class="hero-image">
+                    <img src="img/logo.png" alt="Pijama femenina By Night">
                 </div>
 
             </div>
+        </section>
 
+        <section class="benefits">
+            <div class="container benefits-grid">
 
+                <div class="benefit">
+                    <div class="benefit-icon">♡</div>
+                    <div>
+                        <h3>Suaves</h3>
+                        <p>Piel de durazno agradable al tacto.</p>
+                    </div>
+                </div>
 
-            <div class="relative flex justify-center">
+                <div class="benefit">
+                    <div class="benefit-icon">☾</div>
+                    <div>
+                        <h3>Para descansar</h3>
+                        <p>Diseñadas pensando en tus noches.</p>
+                    </div>
+                </div>
 
-                <div class="absolute -top-8 -right-4 w-24 h-24 bg-[#ead1dc] rounded-3xl rotate-12 opacity-70"></div>
+                <div class="benefit">
+                    <div class="benefit-icon">✦</div>
+                    <div>
+                        <h3>Femeninas</h3>
+                        <p>Diseños delicados y modernos.</p>
+                    </div>
+                </div>
 
-                <div class="absolute -bottom-8 -left-4 w-28 h-28 bg-[#d9c6d2] rounded-full opacity-60"></div>
+                <div class="benefit">
+                    <div class="benefit-icon">✓</div>
+                    <div>
+                        <h3>Compra fácil</h3>
+                        <p>Realiza tu pedido por WhatsApp.</p>
+                    </div>
+                </div>
 
+            </div>
+        </section>
 
-                <div class="relative w-full max-w-lg">
+        <section class="products-section" id="coleccion">
 
-                    <div class="bg-white rounded-[2rem] p-7 shadow-2xl border border-[#eadde1] float">
+            <div class="container">
 
-                        <div class="bg-[#b97891] rounded-3xl p-8 text-white min-h-[390px] flex flex-col justify-between">
+                <div class="section-heading">
+                    <span class="section-label">CATÁLOGO BY NIGHT</span>
 
+                    <h2>Pijamas para sentirte cómoda</h2>
 
-                            <div class="flex justify-between items-start">
+                    <p>
+                        Elige tu diseño favorito y disfruta la suavidad
+                        de la piel de durazno en cada noche.
+                    </p>
+                </div>
 
-                                <div>
+                <div class="product-filters">
+                    <button class="filter-button active" data-category="todos">
+                        Todas
+                    </button>
 
-                                    <p class="text-[#f5dfe7] text-sm font-semibold">
-                                        CREACIONES
-                                    </p>
+                    <button class="filter-button" data-category="enterizas">
+                        Enterizas
+                    </button>
 
-                                    <h2 class="font-display text-4xl font-bold mt-1">
-                                        Samu
-                                    </h2>
+                    <button class="filter-button" data-category="short-top">
+                        Short Top
+                    </button>
 
-                                </div>
+                    <button class="filter-button" data-category="pantalon-camiseta">
+                        Pantalón y Camiseta
+                    </button>
 
+                    <button class="filter-button" data-category="tres piezas">
+                        Tres Piezas
+                    </button>
+                </div>
 
-                                <div class="w-12 h-12 bg-white/15 rounded-2xl flex items-center justify-center">
+                <div class="products-grid" id="productsGrid">
 
-                                    <svg class="w-7 h-7"
-                                         fill="none"
-                                         stroke="currentColor"
-                                         viewBox="0 0 24 24">
+                    <article class="product-card" data-category="enterizas">
 
-                                        <path stroke-linecap="round"
-                                              stroke-linejoin="round"
-                                              stroke-width="1.6"
-                                              d="M6 8.5C6 6 8.7 4 12 4s6 2 6 4.5M5 9h14l-1 11H6L5 9z"/>
+                        <div class="product-image">
+                            <span class="product-badge">Nueva</span>
 
-                                    </svg>
+                            <img src="img/1.jpeg"
+                                 alt="Pijama femenina de vaca">
 
-                                </div>
+                            <button class="quick-cart"
+                                    data-id="1"
+                                    aria-label="Agregar pijama rosa">
+                                +
+                            </button>
+                        </div>
 
-                            </div>
+                        <div class="product-info">
 
+                            <span class="product-category">
+                                Pijama Enteriza
+                            </span>
 
-                            <div class="text-center">
+                            <h3>Pijama Vaca</h3>
 
-                                <div class="text-7xl mb-5">
-                                    🌙
-                                </div>
+                            <p class="product-description">
+                                Pijama femenina de piel de durazno,
+                                suave y ligera.
+                            </p>
 
-                                <p class="text-[#f5dfe7] text-sm font-semibold uppercase tracking-widest">
-                                    Piel durazno
-                                </p>
+                            <div class="product-bottom">
+                                <strong>$45.000</strong>
 
-                                <h3 class="font-display text-3xl font-bold mt-2">
-                                    Suave · Cómoda · Bonita
-                                </h3>
-
-                            </div>
-
-
-                            <div>
-
-                                <p class="text-[#f5dfe7] text-sm">
-                                    Tu momento de descanso
-                                </p>
-
-                                <p class="text-2xl font-bold">
-                                    comienza con Samu.
-                                </p>
-
+                                <button class="add-cart" data-id="1">
+                                    Agregar
+                                </button>
                             </div>
 
                         </div>
+                    </article>
 
-                    </div>
+                    <article class="product-card" data-category="enterizas">
+
+                        <div class="product-image">
+
+                            <img src="img/2.jpeg"
+                                 alt="Pijama femenina snoopy">
+
+                            <button class="quick-cart"
+                                    data-id="2"
+                                    aria-label="Agregar pijama snoopy">
+                                +
+                            </button>
+                        </div>
+
+                        <div class="product-info">
+
+                            <span class="product-category">
+                                Pijama Enteriza
+                            </span>
+
+                            <h3>Pijama Snoopy</h3>
+
+                            <p class="product-description">
+                                Diseño delicado con una textura
+                                suave y confortable.
+                            </p>
+
+                            <div class="product-bottom">
+                                <strong>$45.000</strong>
+
+                                <button class="add-cart" data-id="2">
+                                    Agregar
+                                </button>
+                            </div>
+
+                        </div>
+                    </article>
+
+                    <article class="product-card" data-category="tres piezas">
+
+                        <div class="product-image">
+                            <span class="product-badge">Favorita</span>
+
+                            <img src="img/3.jpeg"
+                                 alt="Pijama femenina cherry de piel de durazno">
+
+                            <button class="quick-cart"
+                                    data-id="3"
+                                    aria-label="Agregar cherry">
+                                +
+                            </button>
+                        </div>
+
+                        <div class="product-info">
+
+                            <span class="product-category">
+                                Pijama pantalón y blusa
+                            </span>
+
+                            <h3>Pijama Cherry</h3>
+
+                            <p class="product-description">
+                                Pijama de piel de durazno con
+                                diseño femenino.
+                            </p>
+
+                            <div class="product-bottom">
+                                <strong>$70.000</strong>
+
+                                <button class="add-cart" data-id="3">
+                                    Agregar
+                                </button>
+                            </div>
+
+                        </div>
+                    </article>
+                    
+                    <article class="product-card" data-category="tres piezas">
+
+                        <div class="product-image">
+                            <img src="img/4.jpeg"
+                                 alt="Pijama femenina love de piel de durazno">
+
+                            <button class="quick-cart"
+                                    data-id="4"
+                                    aria-label="Agregar love">
+                                +
+                            </button>
+                        </div>
+
+                        <div class="product-info">
+
+                            <span class="product-category">
+                                Pijama pantalón y blusa
+                            </span>
+
+                            <h3>Pijama Love</h3>
+
+                            <p class="product-description">
+                                Pijama de piel de durazno con
+                                diseño femenino.
+                            </p>
+
+                            <div class="product-bottom">
+                                <strong>$70.000</strong>
+
+                                <button class="add-cart" data-id="4">
+                                    Agregar
+                                </button>
+                            </div>
+
+                        </div>
+                    </article>
+
+                    <article class="product-card" data-category="short-top">
+
+                        <div class="product-image">
+
+                            <img src="img/5.jpeg"
+                                 alt="Pijama femenina juvenil de piel de durazno">
+
+                            <button class="quick-cart"
+                                    data-id="5"
+                                    aria-label="Agregar pijama estampada">
+                                +
+                            </button>
+                        </div>
+
+                        <div class="product-info">
+
+                            <span class="product-category">
+                                Estampada
+                            </span>
+
+                            <h3>Floral Dreams</h3>
+
+                            <p class="product-description">
+                                Estampado floral y textura suave
+                                para tus momentos de descanso.
+                            </p>
+
+                            <div class="product-bottom">
+                                <strong>$68.000</strong>
+
+                                <button class="add-cart" data-id="5">
+                                    Agregar
+                                </button>
+                            </div>
+
+                        </div>
+                    </article>
+
+                    <article class="product-card" data-category="basicas">
+
+                        <div class="product-image">
+
+                            <img src="img/pijama-negra.jpg"
+                                 alt="Pijama femenina negra de piel de durazno">
+
+                            <button class="quick-cart"
+                                    data-id="5"
+                                    aria-label="Agregar pijama negra">
+                                +
+                            </button>
+                        </div>
+
+                        <div class="product-info">
+
+                            <span class="product-category">
+                                Básica
+                            </span>
+
+                            <h3>Black Night</h3>
+
+                            <p class="product-description">
+                                Un diseño clásico y versátil
+                                para cualquier noche.
+                            </p>
+
+                            <div class="product-bottom">
+                                <strong>$65.000</strong>
+
+                                <button class="add-cart" data-id="5">
+                                    Agregar
+                                </button>
+                            </div>
+
+                        </div>
+                    </article>
+
+                    <article class="product-card" data-category="estampadas">
+
+                        <div class="product-image">
+
+                            <img src="img/pijama-corazones.jpg"
+                                 alt="Pijama femenina estampada de corazones">
+
+                            <button class="quick-cart"
+                                    data-id="6"
+                                    aria-label="Agregar pijama de corazones">
+                                +
+                            </button>
+                        </div>
+
+                        <div class="product-info">
+
+                            <span class="product-category">
+                                Estampada
+                            </span>
+
+                            <h3>Sweet Hearts</h3>
+
+                            <p class="product-description">
+                                Pijama femenina de piel de durazno
+                                con estampado de corazones.
+                            </p>
+
+                            <div class="product-bottom">
+                                <strong>$67.000</strong>
+
+                                <button class="add-cart" data-id="6">
+                                    Agregar
+                                </button>
+                            </div>
+
+                        </div>
+                    </article>
+
+                </div>
+
+            </div>
+        </section>
+
+        <section class="about-section" id="nosotros">
+
+            <div class="container about-content">
+
+                <div class="about-image">
+                    <img src="img/about-pijama.jpg"
+                         alt="Colección de pijamas By Night">
+                </div>
+
+                <div class="about-text">
+
+                    <span class="section-label">SOBRE BY NIGHT</span>
+
+                    <h2>Tu momento favorito del día también puede ser la noche</h2>
+
+                    <p>
+                        En By Night creemos que descansar también es
+                        una forma de consentirte. Por eso creamos una
+                        colección de pijamas femeninas en piel de durazno,
+                        pensadas para acompañarte con suavidad,
+                        comodidad y estilo.
+                    </p>
+
+                    <p>
+                        Elige tu diseño favorito y haz de cada noche
+                        un momento especial.
+                    </p>
+
+                    <a href="#coleccion" class="btn btn-primary">
+                        Ver pijamas
+                    </a>
 
                 </div>
 
             </div>
 
-        </div>
+        </section>
 
-    </div>
+        <section class="cta-section">
 
-</section>
+            <div class="container cta-content">
 
+                <span class="section-label">BY NIGHT</span>
 
+                <h2>¿Ya encontraste tu pijama favorita?</h2>
 
-<section id="coleccion" class="py-24 bg-white">
-
-    <div class="max-w-7xl mx-auto px-5 lg:px-8">
-
-        <div class="text-center max-w-2xl mx-auto mb-14">
-
-            <span class="text-[#b97891] font-bold text-sm uppercase tracking-widest">
-                Nuestra especialidad
-            </span>
-
-            <h2 class="font-display text-4xl md:text-5xl font-bold text-slate-900 mt-3">
-                Pijamas para cada momento
-            </h2>
-
-            <p class="text-slate-600 mt-5 text-lg">
-                Diseños de piel durazno pensados para que
-                disfrutes tus noches con comodidad y estilo.
-            </p>
-
-        </div>
-
-
-        <div class="grid md:grid-cols-3 gap-7">
-
-
-            <div class="card-hover bg-[#fcf5f7] border border-[#eadde1] rounded-3xl p-8">
-
-                <div class="w-14 h-14 bg-[#f4dfe6] text-[#b97891] rounded-2xl flex items-center justify-center text-2xl mb-6">
-                    🌙
-                </div>
-
-                <h3 class="text-xl font-bold text-slate-900">
-                    Pijamas para mujer
-                </h3>
-
-                <p class="text-slate-600 mt-3 leading-relaxed">
-                    Diseños suaves, cómodos y femeninos para
-                    disfrutar de tus noches y momentos en casa.
+                <p>
+                    Escríbenos y realiza tu pedido de manera rápida
+                    y sencilla.
                 </p>
 
-                <a href="#pijamas"
-                   class="inline-block mt-6 text-[#b97891] font-bold">
-                    Ver pijamas →
+                <a href="https://wa.me/573229494731?text=Hola%20By%20Night%2C%20quiero%20hacer%20un%20pedido"
+                   class="btn btn-whatsapp"
+                   target="_blank">
+                    Comprar por WhatsApp
                 </a>
 
             </div>
 
+        </section>
 
+    </main>
 
-            <div class="card-hover bg-[#fcf5f7] border border-[#eadde1] rounded-3xl p-8">
+    <footer class="footer" id="contacto">
 
-                <div class="w-14 h-14 bg-[#eee1ea] text-[#a66f91] rounded-2xl flex items-center justify-center text-2xl mb-6">
-                    ❤️
-                </div>
+        <div class="container footer-grid">
 
-                <h3 class="text-xl font-bold text-slate-900">
-                    Pijamas de pareja
-                </h3>
+            <div class="footer-brand">
+                <span class="logo-main">By Night</span>
 
-                <p class="text-slate-600 mt-3 leading-relaxed">
-                    Combina tus noches con diseños especiales
-                    para compartir en pareja.
+                <p>
+                    Pijamas femeninas de piel de durazno
+                    para noches llenas de comodidad.
                 </p>
+            </div>
 
-                <a href="#pijamas"
-                   class="inline-block mt-6 text-[#b97891] font-bold">
-                    Ver diseños →
-                </a>
+            <div class="footer-links">
+
+                <h3>Tienda</h3>
+
+                <a href="#coleccion">Colección</a>
+                <a href="#nosotros">Nosotras</a>
+                <a href="#contacto">Contacto</a>
 
             </div>
 
+            <div class="footer-contact">
 
+                <h3>Contáctanos</h3>
 
-            <div class="card-hover bg-[#fcf5f7] border border-[#eadde1] rounded-3xl p-8">
+                <a href="https://wa.me/573229494731"
+                   target="_blank">
+                    WhatsApp
+                </a>
 
-                <div class="w-14 h-14 bg-[#f1e5d9] text-[#aa8060] rounded-2xl flex items-center justify-center text-2xl mb-6">
-                    🎄
-                </div>
-
-                <h3 class="text-xl font-bold text-slate-900">
-                    Pijamas navideñas
-                </h3>
-
-                <p class="text-slate-600 mt-3 leading-relaxed">
-                    Diseños especiales para compartir,
-                    celebrar y disfrutar la temporada navideña.
-                </p>
-
-                <a href="#contacto"
-                   class="inline-block mt-6 text-[#b97891] font-bold">
-                    Consultar →
+                <a href="https://www.instagram.com/"
+                   target="_blank">
+                    Instagram
                 </a>
 
             </div>
 
         </div>
 
-    </div>
-
-</section>
-
-
-
-<section id="pijamas" class="py-24 bg-[#fcf8f7]">
-
-    <div class="max-w-7xl mx-auto px-5 lg:px-8">
-
-        <div class="text-center max-w-2xl mx-auto mb-14">
-
-            <span class="text-[#b97891] font-bold text-sm uppercase tracking-widest">
-                Colección Samu
-            </span>
-
-            <h2 class="font-display text-4xl md:text-5xl font-bold text-slate-900 mt-3">
-                Nuestras pijamas
-            </h2>
-
-            <p class="text-slate-600 mt-5 text-lg">
-                Todas nuestras pijamas están pensadas para
-                brindarte suavidad, comodidad y estilo.
-            </p>
-
+        <div class="footer-bottom">
+            <p>© 2026 By Night. Todos los derechos reservados.</p>
         </div>
 
+    </footer>
 
-        <div class="grid grid-cols-2 md:grid-cols-3 gap-5">
+    <div class="cart-overlay" id="cartOverlay"></div>
 
+    <aside class="cart-panel" id="cartPanel">
 
-            <div class="card-hover bg-white rounded-3xl p-7 border border-[#eadde1] text-center">
-
-                <div class="text-5xl mb-5">
-                    🌸
-                </div>
-
-                <h3 class="font-bold text-slate-900">
-                    Pijamas femeninas
-                </h3>
-
-                <p class="text-sm text-slate-500 mt-2">
-                    Diseños delicados y cómodos
-                </p>
-
-            </div>
-
-
-
-            <div class="card-hover bg-white rounded-3xl p-7 border border-[#eadde1] text-center">
-
-                <div class="text-5xl mb-5">
-                    ❤️
-                </div>
-
-                <h3 class="font-bold text-slate-900">
-                    Pijamas de pareja
-                </h3>
-
-                <p class="text-sm text-slate-500 mt-2">
-                    Diseños para compartir
-                </p>
-
-            </div>
-
-
-
-            <div class="card-hover bg-white rounded-3xl p-7 border border-[#eadde1] text-center">
-
-                <div class="text-5xl mb-5">
-                    🎄
-                </div>
-
-                <h3 class="font-bold text-slate-900">
-                    Pijamas navideñas
-                </h3>
-
-                <p class="text-sm text-slate-500 mt-2">
-                    Diseños para Navidad
-                </p>
-
-            </div>
-
-
-
-            <div class="card-hover bg-white rounded-3xl p-7 border border-[#eadde1] text-center">
-
-                <div class="text-5xl mb-5">
-                    ✨
-                </div>
-
-                <h3 class="font-bold text-slate-900">
-                    Diferentes diseños
-                </h3>
-
-                <p class="text-sm text-slate-500 mt-2">
-                    Elige tu favorito
-                </p>
-
-            </div>
-
-
-
-            <div class="card-hover bg-white rounded-3xl p-7 border border-[#eadde1] text-center">
-
-                <div class="text-5xl mb-5">
-                    📏
-                </div>
-
-                <h3 class="font-bold text-slate-900">
-                    Diferentes tallas
-                </h3>
-
-                <p class="text-sm text-slate-500 mt-2">
-                    Consulta disponibilidad
-                </p>
-
-            </div>
-
-
-
-            <div class="card-hover bg-white rounded-3xl p-7 border border-[#eadde1] text-center">
-
-                <div class="text-5xl mb-5">
-                    🎨
-                </div>
-
-                <h3 class="font-bold text-slate-900">
-                    Diferentes colores
-                </h3>
-
-                <p class="text-sm text-slate-500 mt-2">
-                    Pregunta por los disponibles
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<section id="nosotros" class="py-24 bg-white">
-
-    <div class="max-w-7xl mx-auto px-5 lg:px-8">
-
-        <div class="grid lg:grid-cols-2 gap-16 items-center">
-
+        <div class="cart-header">
 
             <div>
-
-                <span class="text-[#b97891] font-bold text-sm uppercase tracking-widest">
-                    Sobre nosotros
-                </span>
-
-                <h2 class="font-display text-4xl md:text-5xl font-bold text-slate-900 mt-3">
-                    Creaciones Samu
-                </h2>
-
-                <p class="text-slate-600 text-lg leading-relaxed mt-6">
-
-                    Somos una tienda especializada en pijamas
-                    de piel durazno, pensadas para quienes buscan
-                    comodidad, suavidad y diseños bonitos para
-                    disfrutar sus momentos de descanso.
-
-                </p>
-
-                <p class="text-slate-600 leading-relaxed mt-4">
-
-                    Nos encanta ofrecer diferentes estilos,
-                    colores y opciones para que encuentres
-                    la pijama perfecta para ti o para compartir
-                    con alguien especial.
-
-                </p>
-
-
-                <div class="grid grid-cols-2 gap-5 mt-8">
-
-
-                    <div class="bg-[#f9e9ee] rounded-2xl p-5">
-
-                        <p class="text-3xl font-extrabold text-[#b97891]">
-                            01
-                        </p>
-
-                        <p class="font-bold text-slate-900 mt-2">
-                            Suavidad
-                        </p>
-
-                    </div>
-
-
-                    <div class="bg-[#eee4ea] rounded-2xl p-5">
-
-                        <p class="text-3xl font-extrabold text-[#9f6d89]">
-                            02
-                        </p>
-
-                        <p class="font-bold text-slate-900 mt-2">
-                            Comodidad
-                        </p>
-
-                    </div>
-
-                </div>
-
+                <span class="section-label">BY NIGHT</span>
+                <h2>Tu carrito</h2>
             </div>
 
+            <button class="close-cart"
+                    id="closeCart"
+                    aria-label="Cerrar carrito">
+                ×
+            </button>
 
+        </div>
 
-            <div class="bg-[#6f4b5c] rounded-[2rem] p-8 md:p-12 text-white">
+        <div class="cart-items" id="cartItems">
 
-                <div class="text-6xl mb-8">
-                    🌙
-                </div>
+            <div class="empty-cart">
 
-                <h3 class="font-display text-3xl font-bold">
-                    Tu descanso merece sentirse increíble.
-                </h3>
+                <span>🛍</span>
 
-                <p class="text-[#ead9df] mt-5 leading-relaxed">
+                <h3>Tu carrito está vacío</h3>
 
-                    Elige una pijama de piel durazno y disfruta
-                    la suavidad que necesitas para sentirte cómoda
-                    en casa y descansar cada noche.
-
+                <p>
+                    Agrega una pijama para comenzar tu compra.
                 </p>
 
-                <a href="#contacto"
-                   class="inline-flex mt-8 bg-white text-[#6f4b5c] px-6 py-3 rounded-xl font-bold hover:bg-[#f9edf1] transition">
-
-                    Ver disponibilidad
-
-                </a>
+                <button class="btn btn-primary"
+                        id="continueShopping">
+                    Ver colección
+                </button>
 
             </div>
 
         </div>
 
-    </div>
+        <div class="cart-footer">
 
-</section>
+            <div class="cart-total">
+                <span>Total</span>
+                <strong id="cartTotal">$0</strong>
+            </div>
 
-
-
-<section id="contacto" class="py-24 bg-[#b97891] text-white">
-
-    <div class="max-w-5xl mx-auto px-5 lg:px-8 text-center">
-
-        <div class="inline-flex items-center gap-2 bg-white/10 border border-white/20 px-4 py-2 rounded-full text-sm font-semibold">
-
-            Pide la tuya
-
-        </div>
-
-
-        <h2 class="font-display text-4xl md:text-6xl font-bold mt-6">
-
-            ¿Qué pijama estás buscando?
-
-        </h2>
-
-
-        <p class="text-[#f5dfe7] text-lg max-w-2xl mx-auto mt-5 leading-relaxed">
-
-            Escríbenos para consultar diseños, tallas,
-            colores, disponibilidad y realizar tu pedido.
-
-        </p>
-
-
-        <div class="mt-9">
-
-            <a href="#"
-               onclick="alert('Agrega aquí el enlace de WhatsApp de Creaciones Samu')"
-               class="inline-flex items-center gap-3 bg-white text-[#b97891] px-8 py-4 rounded-xl font-extrabold text-lg hover:bg-[#fdf4f6] transition shadow-2xl">
-
-                <svg class="w-6 h-6"
-                     fill="currentColor"
-                     viewBox="0 0 24 24">
-
-                    <path d="M20.52 3.48A11.82 11.82 0 0012.05 0C5.52 0 .2 5.32.2 11.85c0 2.09.55 4.13 1.6 5.92L.1 24l6.38-1.67a11.84 11.84 0 005.57 1.42h.01c6.53 0 11.85-5.32 11.85-11.85a11.82 11.82 0 00-3.39-8.42z"/>
-
-                </svg>
-
-                Comprar por WhatsApp
-
+            <a href="https://wa.me/573229494731?text=Hola%20By%20Night%2C%20quiero%20realizar%20mi%20pedido"
+               class="checkout-whatsapp"
+               id="checkoutWhatsapp"
+               target="_blank">
+                Finalizar pedido por WhatsApp
             </a>
 
         </div>
 
-    </div>
-
-</section>
-
-
-
-<footer class="bg-[#33272d] text-[#cbbbc2]">
-
-    <div class="max-w-7xl mx-auto px-5 lg:px-8 py-12">
-
-        <div class="grid md:grid-cols-3 gap-10">
-
-
-            <div>
-
-                <div class="flex items-center gap-3">
-
-                    <div class="w-10 h-10 bg-[#b97891] text-white rounded-xl flex items-center justify-center">
-
-                        <svg class="w-5 h-5"
-                             fill="none"
-                             stroke="currentColor"
-                             viewBox="0 0 24 24">
-
-                            <path stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                  stroke-width="1.8"
-                                  d="M6 8.5C6 6 8.7 4 12 4s6 2 6 4.5M5 9h14l-1 11H6L5 9z"/>
-
-                        </svg>
-
-                    </div>
-
-                    <p class="text-xl font-bold text-white">
-                        Creaciones Samu
-                    </p>
-
-                </div>
-
-
-                <p class="mt-5 text-sm leading-relaxed max-w-sm">
-
-                    Pijamas de piel durazno suaves,
-                    cómodas y bonitas para disfrutar
-                    tus momentos de descanso.
-
-                </p>
-
-            </div>
-
-
-
-            <div>
-
-                <h3 class="text-white font-bold mb-4">
-                    Enlaces
-                </h3>
-
-                <div class="flex flex-col gap-3 text-sm">
-
-                    <a href="#inicio" class="hover:text-white transition">
-                        Inicio
-                    </a>
-
-                    <a href="#coleccion" class="hover:text-white transition">
-                        Colección
-                    </a>
-
-                    <a href="#pijamas" class="hover:text-white transition">
-                        Pijamas
-                    </a>
-
-                    <a href="#nosotros" class="hover:text-white transition">
-                        Nosotros
-                    </a>
-
-                    <a href="#contacto" class="hover:text-white transition">
-                        Contacto
-                    </a>
-
-                </div>
-
-            </div>
-
-
-
-            <div>
-
-                <h3 class="text-white font-bold mb-4">
-                    Creaciones Samu
-                </h3>
-
-                <p class="text-sm leading-relaxed">
-
-                    Pijamas de piel durazno para mujer,
-                    pareja y ocasiones especiales.
-
-                </p>
-
-                <a href="#contacto"
-                   class="inline-block mt-4 text-[#e4a8bc] hover:text-white font-semibold text-sm">
-
-                    Hacer un pedido →
-
-                </a>
-
-            </div>
-
-        </div>
-
-
-        <div class="border-t border-[#4a3a42] mt-10 pt-6 text-center text-sm">
-
-            <p>
-                © 2026 Creaciones Samu. Todos los derechos reservados.
-            </p>
-
-        </div>
-
-    </div>
-
-</footer>
-
-
-
-<script>
-
-    const menuBtn = document.getElementById('menu-btn');
-
-    const mobileMenu = document.getElementById('mobile-menu');
-
-
-    menuBtn.addEventListener('click', () => {
-
-        mobileMenu.classList.toggle('hidden');
-
-    });
-
-
-    document.querySelectorAll('#mobile-menu a').forEach(link => {
-
-        link.addEventListener('click', () => {
-
-            mobileMenu.classList.add('hidden');
-
-        });
-
-    });
-
-</script>
-
+    </aside>
+
+    <a href="https://wa.me/573229494731?text=Hola%20By%20Night%2C%20quiero%20informaci%C3%B3n%20sobre%20sus%20pijamas"
+       class="whatsapp-float"
+       target="_blank"
+       aria-label="Contactar por WhatsApp">
+        <span>WhatsApp</span>
+    </a>
+
+    <script src="script.js"></script>
 
 </body>
 </html>
-```
