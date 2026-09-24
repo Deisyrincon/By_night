@@ -1,39 +1,39 @@
 const products = [
     {
         id: 1,
-        name: "Pijama Rosa Love",
-        price: 65000,
-        image: "img/pijama-rosa.jpg"
+        name: "Pijama Vaca",
+        price: 45000,
+        image: "img/1.jpeg"
     },
     {
         id: 2,
-        name: "Dreamy Celeste",
-        price: 62000,
-        image: "img/pijama-celeste.jpg"
+        name: "Pijama Snoopy",
+        price: 45000,
+        image: "img/2.jpeg"
     },
     {
         id: 3,
-        name: "Lavender Night",
+        name: "Pijama Cherry",
         price: 70000,
-        image: "img/pijama-morada.jpg"
+        image: "img/3.jpeg"
     },
     {
         id: 4,
-        name: "Floral Dreams",
-        price: 68000,
-        image: "img/pijama-flores.jpg"
+        name: "Pijama Love",
+        price: 70000,
+        image: "img/4.jpeg"
     },
     {
         id: 5,
-        name: "Black Night",
-        price: 65000,
-        image: "img/pijama-negra.jpg"
+        name: "Pijama Pucca",
+        price: 45000,
+        image: "img/5.jpeg"
     },
     {
         id: 6,
-        name: "Sweet Hearts",
-        price: 67000,
-        image: "img/pijama-corazones.jpg"
+        name: "Pijama Osito",
+        price: 65000,
+        image: "img/6.jpeg"
     }
 ];
 
@@ -47,6 +47,7 @@ const cartItems = document.getElementById("cartItems");
 const cartCount = document.getElementById("cartCount");
 const cartTotal = document.getElementById("cartTotal");
 const checkoutWhatsapp = document.getElementById("checkoutWhatsapp");
+const continueShopping = document.getElementById("continueShopping");
 const menuButton = document.getElementById("menuButton");
 const nav = document.getElementById("nav");
 
@@ -85,93 +86,153 @@ function updateCart() {
 function renderCart() {
 
     if (cart.length === 0) {
+
         cartItems.innerHTML = `
             <div class="empty-cart">
+
                 <span>🛍</span>
-                <h3>Tu carrito está vacío</h3>
+
+                <h3>
+                    Tu carrito está vacío
+                </h3>
+
                 <p>
                     Agrega una pijama para comenzar tu compra.
                 </p>
-                <button class="btn btn-primary" id="continueShopping">
+
+                <button
+                    class="btn btn-primary"
+                    id="continueShopping">
                     Ver colección
                 </button>
+
             </div>
         `;
 
-        const continueShopping = document.getElementById("continueShopping");
+        const button = document.getElementById("continueShopping");
 
-        if (continueShopping) {
-            continueShopping.addEventListener("click", closeCartPanel);
+        if (button) {
+            button.addEventListener("click", () => {
+                closeCartPanel();
+
+                const collection = document.getElementById("coleccion");
+
+                if (collection) {
+                    collection.scrollIntoView({
+                        behavior: "smooth"
+                    });
+                }
+            });
         }
 
         return;
     }
 
-    cartItems.innerHTML = cart.map(item => `
-        <div class="cart-item">
+    cartItems.innerHTML = cart.map(item => {
 
-            <div class="cart-item-image">
-                <img src="${item.image}" alt="${item.name}">
-            </div>
+        const subtotal = item.price * item.quantity;
 
-            <div class="cart-item-info">
-                <h4>${item.name}</h4>
+        return `
+            <div class="cart-item">
 
-                <div class="cart-item-price">
-                    ${formatPrice(item.price)}
+                <div class="cart-item-image">
+                    <img
+                        src="${item.image}"
+                        alt="${item.name}">
                 </div>
 
-                <div class="quantity-control">
+                <div class="cart-item-info">
 
-                    <button
-                        class="decrease"
-                        data-id="${item.id}">
-                        −
-                    </button>
+                    <h4>
+                        ${item.name}
+                    </h4>
 
-                    <span>${item.quantity}</span>
+                    <div class="cart-item-price">
+                        ${formatPrice(item.price)}
+                    </div>
 
-                    <button
-                        class="increase"
-                        data-id="${item.id}">
-                        +
-                    </button>
+                    <div class="quantity-control">
+
+                        <button
+                            type="button"
+                            class="decrease"
+                            data-id="${item.id}"
+                            aria-label="Disminuir cantidad">
+                            −
+                        </button>
+
+                        <span>
+                            ${item.quantity}
+                        </span>
+
+                        <button
+                            type="button"
+                            class="increase"
+                            data-id="${item.id}"
+                            aria-label="Aumentar cantidad">
+                            +
+                        </button>
+
+                    </div>
+
+                    <small>
+                        Subtotal: ${formatPrice(subtotal)}
+                    </small>
 
                 </div>
+
+                <button
+                    type="button"
+                    class="remove-item"
+                    data-id="${item.id}"
+                    aria-label="Eliminar ${item.name}">
+                    ×
+                </button>
+
             </div>
-
-            <button
-                class="remove-item"
-                data-id="${item.id}"
-                aria-label="Eliminar ${item.name}">
-                ×
-            </button>
-
-        </div>
-    `).join("");
+        `;
+    }).join("");
 
     document.querySelectorAll(".increase").forEach(button => {
+
         button.addEventListener("click", () => {
-            changeQuantity(Number(button.dataset.id), 1);
+
+            const id = Number(button.dataset.id);
+
+            changeQuantity(id, 1);
+
         });
+
     });
 
     document.querySelectorAll(".decrease").forEach(button => {
+
         button.addEventListener("click", () => {
-            changeQuantity(Number(button.dataset.id), -1);
+
+            const id = Number(button.dataset.id);
+
+            changeQuantity(id, -1);
+
         });
+
     });
 
     document.querySelectorAll(".remove-item").forEach(button => {
+
         button.addEventListener("click", () => {
-            removeFromCart(Number(button.dataset.id));
+
+            const id = Number(button.dataset.id);
+
+            removeFromCart(id);
+
         });
+
     });
 }
 
 function addToCart(id) {
 
-    const product = products.find(item => item.id === id);
+    const product = products.find(product => product.id === id);
 
     if (!product) {
         return;
@@ -180,15 +241,20 @@ function addToCart(id) {
     const existingProduct = cart.find(item => item.id === id);
 
     if (existingProduct) {
-        existingProduct.quantity++;
+
+        existingProduct.quantity += 1;
+
     } else {
+
         cart.push({
             ...product,
             quantity: 1
         });
+
     }
 
     updateCart();
+
     openCartPanel();
 }
 
@@ -203,64 +269,102 @@ function changeQuantity(id, amount) {
     product.quantity += amount;
 
     if (product.quantity <= 0) {
+
         cart = cart.filter(item => item.id !== id);
+
     }
 
     updateCart();
 }
 
 function removeFromCart(id) {
+
     cart = cart.filter(item => item.id !== id);
+
     updateCart();
 }
 
 function openCartPanel() {
+
+    if (!cartPanel || !cartOverlay) {
+        return;
+    }
+
     cartPanel.classList.add("active");
     cartOverlay.classList.add("active");
+
     document.body.classList.add("cart-open");
 }
 
 function closeCartPanel() {
+
+    if (!cartPanel || !cartOverlay) {
+        return;
+    }
+
     cartPanel.classList.remove("active");
     cartOverlay.classList.remove("active");
+
     document.body.classList.remove("cart-open");
 }
 
 function updateWhatsappLink() {
 
-    if (cart.length === 0) {
-        checkoutWhatsapp.href =
-            `https://wa.me/${whatsappNumber}?text=Hola%20By%20Night%2C%20quiero%20realizar%20un%20pedido`;
+    if (!checkoutWhatsapp) {
         return;
     }
 
-    let message = "Hola By Night, quiero realizar el siguiente pedido:%0A%0A";
+    if (cart.length === 0) {
+
+        const message = "Hola By Night, quiero realizar un pedido";
+
+        checkoutWhatsapp.href =
+            `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+
+        return;
+    }
+
+    let message =
+        "Hola By Night, quiero realizar el siguiente pedido:\n\n";
 
     cart.forEach(item => {
+
         const subtotal = item.price * item.quantity;
 
-        message += `• ${item.name}%0A`;
-        message += `Cantidad: ${item.quantity}%0A`;
-        message += `Precio: ${formatPrice(item.price)}%0A`;
-        message += `Subtotal: ${formatPrice(subtotal)}%0A%0A`;
+        message +=
+            `${item.name}\n` +
+            `Cantidad: ${item.quantity}\n` +
+            `Precio: ${formatPrice(item.price)}\n` +
+            `Subtotal: ${formatPrice(subtotal)}\n\n`;
+
     });
 
     const total = cart.reduce((sum, item) => {
         return sum + item.price * item.quantity;
     }, 0);
 
-    message += `Total: ${formatPrice(total)}%0A%0A`;
-    message += "Quedo atenta para confirmar disponibilidad y envío.";
+    message += `Total: ${formatPrice(total)}\n\n`;
+
+    message +=
+        "Quedo atenta para confirmar disponibilidad y envío.";
 
     checkoutWhatsapp.href =
-        `https://wa.me/${whatsappNumber}?text=${message}`;
+        `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 }
 
+
 document.querySelectorAll(".add-cart, .quick-cart").forEach(button => {
+
     button.addEventListener("click", () => {
-        addToCart(Number(button.dataset.id));
+
+        const id = Number(button.dataset.id);
+
+        addToCart(id);
+
     });
+
 });
+
 
 document.querySelectorAll(".filter-button").forEach(button => {
 
@@ -276,13 +380,19 @@ document.querySelectorAll(".filter-button").forEach(button => {
 
         document.querySelectorAll(".product-card").forEach(card => {
 
+            const cardCategory = card.dataset.category;
+
             if (
                 category === "todos" ||
-                card.dataset.category === category
+                cardCategory === category
             ) {
+
                 card.style.display = "";
+
             } else {
+
                 card.style.display = "none";
+
             }
 
         });
@@ -291,27 +401,63 @@ document.querySelectorAll(".filter-button").forEach(button => {
 
 });
 
-openCart.addEventListener("click", openCartPanel);
 
-closeCart.addEventListener("click", closeCartPanel);
+if (openCart) {
 
-cartOverlay.addEventListener("click", closeCartPanel);
+    openCart.addEventListener("click", openCartPanel);
 
-menuButton.addEventListener("click", () => {
-    nav.classList.toggle("active");
-});
+}
+
+if (closeCart) {
+
+    closeCart.addEventListener("click", closeCartPanel);
+
+}
+
+if (cartOverlay) {
+
+    cartOverlay.addEventListener("click", closeCartPanel);
+
+}
+
+
+if (menuButton && nav) {
+
+    menuButton.addEventListener("click", () => {
+
+        nav.classList.toggle("active");
+
+    });
+
+}
+
 
 document.querySelectorAll(".nav a").forEach(link => {
+
     link.addEventListener("click", () => {
-        nav.classList.remove("active");
+
+        if (nav) {
+            nav.classList.remove("active");
+        }
+
     });
+
 });
 
+
 document.addEventListener("keydown", event => {
+
     if (event.key === "Escape") {
+
         closeCartPanel();
-        nav.classList.remove("active");
+
+        if (nav) {
+            nav.classList.remove("active");
+        }
+
     }
+
 });
+
 
 updateCart();
