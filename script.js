@@ -319,6 +319,7 @@ const cartTotal = document.getElementById("cartTotal");
 const checkoutWhatsapp = document.getElementById("checkoutWhatsapp");
 const checkoutNequi = document.getElementById("checkoutNequi");
 const nequiConfirm = document.getElementById("nequiConfirm");
+const checkoutCustomerForm = document.getElementById("checkoutCustomerForm");
 
 const nequiModal = document.getElementById("nequiModal");
 const nequiClose = document.getElementById("nequiClose");
@@ -362,6 +363,34 @@ function getCartTotal() {
     return cart.reduce((total, item) => {
         return total + getItemSubtotal(item);
     }, 0);
+}
+
+function getCheckoutCustomerDetails() {
+    if (!checkoutCustomerForm) {
+        return null;
+    }
+
+    const formData = new FormData(checkoutCustomerForm);
+
+    return {
+        name: String(formData.get("customerName") || "").trim(),
+        phone: String(formData.get("customerPhone") || "").trim(),
+        address: String(formData.get("customerAddress") || "").trim()
+    };
+}
+
+function validateCheckoutCustomer() {
+    if (!checkoutCustomerForm) {
+        return true;
+    }
+
+    const isValid = checkoutCustomerForm.reportValidity();
+
+    if (!isValid) {
+        checkoutCustomerForm.closest("details")?.setAttribute("open", "");
+    }
+
+    return isValid;
 }
 
 
@@ -417,7 +446,8 @@ function getProductFromCard(id, sourceCard = null) {
         name: name.textContent.trim(),
         price: numericPrice,
         image: image.getAttribute("src"),
-        category: card.dataset.category || ""
+        category: card.dataset.category || "",
+        size: card.querySelector(".product-size")?.value || "Única"
     };
 }
 
@@ -430,8 +460,9 @@ function syncCartWithProducts() {
     cart = cart
         .map(item => {
             const product =
-                getProductFromCard(item.id) ||
-                getProductById(item.id);
+                item.name && item.image
+                    ? item
+                    : getProductFromCard(item.id) || getProductById(item.id);
 
             if (!product) {
                 return null;
@@ -439,7 +470,8 @@ function syncCartWithProducts() {
 
             return {
                 ...product,
-                quantity: item.quantity
+                quantity: item.quantity,
+                size: item.size || "Única"
             };
         })
         .filter(Boolean);
@@ -539,6 +571,10 @@ function renderCart() {
                             ${escapeHtml(item.name)}
                         </h4>
 
+                        <small>
+                            Talla: ${escapeHtml(item.size || "Única")}
+                        </small>
+
                         <div class="cart-item-price">
                             ${formatPrice(item.price)}
                         </div>
@@ -549,6 +585,7 @@ function renderCart() {
                                 type="button"
                                 class="decrease"
                                 data-id="${item.id}"
+                                data-size="${escapeHtml(item.size || "Única")}" 
                                 aria-label="Disminuir cantidad">
                                 −
                             </button>
@@ -561,6 +598,7 @@ function renderCart() {
                                 type="button"
                                 class="increase"
                                 data-id="${item.id}"
+                                data-size="${escapeHtml(item.size || "Única")}" 
                                 aria-label="Aumentar cantidad">
                                 +
                             </button>
@@ -578,7 +616,8 @@ function renderCart() {
                         type="button"
                         class="remove-item"
                         data-id="${item.id}"
-                        aria-label="Eliminar ${escapeHtml(item.name)}">
+                        data-size="${escapeHtml(item.size || "Única")}" 
+                        aria-label="Eliminar ${escapeHtml(item.name)} talla ${escapeHtml(item.size || "Única")}">
                         ×
                     </button>
 
@@ -609,8 +648,9 @@ function addToCart(id, sourceCard = null) {
         return;
     }
 
+    const selectedSize = product.size || "Única";
     const existingProduct =
-        cart.find(item => item.id === numericId);
+        cart.find(item => item.id === numericId && (item.size || "Única") === selectedSize);
 
     if (existingProduct) {
         existingProduct.quantity += 1;
@@ -625,11 +665,11 @@ function addToCart(id, sourceCard = null) {
     openCartPanel();
 }
 
-function changeQuantity(id, amount) {
+function changeQuantity(id, amount, size = "Única") {
     const numericId = Number(id);
 
     const product =
-        cart.find(item => item.id === numericId);
+        cart.find(item => item.id === numericId && (item.size || "Única") === size);
 
     if (!product) {
         return;
@@ -639,21 +679,56 @@ function changeQuantity(id, amount) {
 
     if (product.quantity <= 0) {
         cart = cart.filter(
-            item => item.id !== numericId
+            item => !(item.id === numericId && (item.size || "Única") === size)
         );
     }
 
     updateCart();
 }
 
-function removeFromCart(id) {
+function removeFromCart(id, size = "Única") {
     const numericId = Number(id);
 
     cart = cart.filter(
-        item => item.id !== numericId
+        item => !(item.id === numericId && (item.size || "Única") === size)
     );
 
     updateCart();
+}
+
+function initializeProductSizes() {
+    if (!document.querySelector(".product-card")) {
+        return;
+    }
+
+    document.querySelectorAll(".product-card").forEach(card => {
+        if (card.querySelector(".product-size")) {
+            return;
+        }
+
+        const label = document.createElement("label");
+        label.className = "product-size-label";
+        label.textContent = "Talla";
+
+        const select = document.createElement("select");
+        select.className = "product-size";
+        select.name = "size";
+        select.setAttribute("aria-label", "Seleccionar talla");
+
+        ["XS", "S", "M", "L", "XL"].forEach(size => {
+            const option = document.createElement("option");
+            option.value = size;
+            option.textContent = size;
+            select.appendChild(option);
+        });
+
+        label.appendChild(select);
+
+        const productBottom = card.querySelector(".product-bottom");
+        if (productBottom) {
+            productBottom.before(label);
+        }
+    });
 }
 
 function openCartPanel() {
@@ -697,12 +772,22 @@ function updateWhatsappLink() {
     let message =
         "Hola By Night, quiero realizar el siguiente pedido:\n\n";
 
+    const customer = getCheckoutCustomerDetails();
+
+    if (customer && customer.name) {
+        message +=
+            `Cliente: ${customer.name}\n` +
+            `Celular: ${customer.phone}\n` +
+            `Dirección: ${customer.address}\n\n`;
+    }
+
     cart.forEach(item => {
         const subtotal =
             getItemSubtotal(item);
 
         message +=
             `Producto: ${item.name}\n` +
+            `Talla: ${item.size || "Única"}\n` +
             `Cantidad: ${item.quantity}\n` +
             `Precio: ${formatPrice(item.price)}\n` +
             `Subtotal: ${formatPrice(subtotal)}\n\n`;
@@ -743,9 +828,13 @@ function updateNequiInfo() {
         nequiNumber;
 
     if (nequiConfirm) {
+        const customer = getCheckoutCustomerDetails();
         const message =
             `Hola By Night, realicé un pago por Nequi de ${formatPrice(total)}. ` +
-            "Adjunto el comprobante para confirmar mi pedido.";
+            "Adjunto el comprobante para confirmar mi pedido." +
+            (customer && customer.name
+                ? ` Cliente: ${customer.name}. Celular: ${customer.phone}. Dirección: ${customer.address}.`
+                : "");
 
         nequiConfirm.href =
             `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
@@ -824,7 +913,10 @@ document.addEventListener("click", event => {
         const id =
             Number(increaseButton.dataset.id);
 
-        changeQuantity(id, 1);
+        const size =
+            increaseButton.dataset.size || "Única";
+
+        changeQuantity(id, 1, size);
 
         return;
     }
@@ -834,7 +926,10 @@ document.addEventListener("click", event => {
         const id =
             Number(decreaseButton.dataset.id);
 
-        changeQuantity(id, -1);
+        const size =
+            decreaseButton.dataset.size || "Única";
+
+        changeQuantity(id, -1, size);
 
         return;
     }
@@ -844,7 +939,10 @@ document.addEventListener("click", event => {
         const id =
             Number(removeButton.dataset.id);
 
-        removeFromCart(id);
+        const size =
+            removeButton.dataset.size || "Única";
+
+        removeFromCart(id, size);
     }
 });
 
@@ -864,9 +962,31 @@ if (checkoutNequi) {
                 return;
             }
 
+            if (!validateCheckoutCustomer()) {
+                return;
+            }
+
             openNequiModal();
         }
     );
+}
+
+if (checkoutCustomerForm) {
+    checkoutCustomerForm.addEventListener("input", () => {
+        updateWhatsappLink();
+        updateNequiInfo();
+    });
+}
+
+if (checkoutWhatsapp && checkoutCustomerForm) {
+    checkoutWhatsapp.addEventListener("click", event => {
+        if (!validateCheckoutCustomer()) {
+            event.preventDefault();
+            return;
+        }
+
+        updateWhatsappLink();
+    });
 }
 
 
@@ -976,11 +1096,15 @@ document
 if (openCart) {
     openCart.addEventListener(
         "click",
-        openCartPanel
+        event => {
+            event.preventDefault();
+
+            if (cartPanel && cartOverlay) {
+                openCartPanel();
+            }
+        }
     );
 }
-
-
 
 if (closeCart) {
     closeCart.addEventListener(
@@ -1071,4 +1195,5 @@ document.addEventListener(
     }
 );
 
+initializeProductSizes();
 updateCart();
