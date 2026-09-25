@@ -7,6 +7,8 @@
     <title>Catálogo | By Night</title>
     <meta name="description" content="Catálogo de pijamas femeninas By Night en piel de durazno.">
 
+    <link rel="icon" type="image/png" href="img/logo.png">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
@@ -16,554 +18,1910 @@
 
 <body>
 
-    <header class="header" id="inicio">
-
-        <div class="container header-container">
-
-            <a href="#inicio" class="logo">
-                <span class="logo-main">By Night</span>
-                <span class="logo-sub">Pijamas femeninas</span>
-            </a>
-            <nav class="nav" id="nav">
-                <a href="index.html">Inicio</a>
-                <a href="catalogo.html" class="active">Catálogo</a>
-                <a href="index.html#nosotros">Nosotras</a>
-                <a href="index.html#contacto">Contacto</a>
-            </nav>
-
-            <div class="header-actions">
-
-                <button class="cart-button" id="openCart" aria-label="Abrir carrito">
-                    <span class="cart-icon">🛍</span>
-                    <span class="cart-text">Carrito</span>
-                    <span class="cart-count" id="cartCount">0</span>
-                </button>
-
-                <button class="menu-button" id="menuButton" aria-label="Abrir menú">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-
-            </div>
-
-        </div>
-
-    </header>
-
-    <main>
-
-        <section class="catalog-hero">
-
-            <div class="container">
-
-                <span class="section-label">
-                    BY NIGHT
-                </span>
-
-                <h1>
-                    Nuestro catálogo
-                </h1>
-
-                <p>
-                    Descubre nuestras pijamas femeninas en piel de durazno
-                    y encuentra el diseño perfecto para tus noches.
-                </p>
-
-            </div>
-
-        </section>
-
-        <section class="catalog-section" id="coleccion">
-
-            <div class="container">
-
-                <div class="catalog-top">
-
-                    <div>
-                        <span class="section-label">
-                            CATÁLOGO
-                        </span>
-
-                        <h2>
-                            Pijamas femeninas
-                        </h2>
-                    </div>
-
-                    <a href="https://wa.me/573229494731?text=Hola%20By%20Night%2C%20quiero%20informaci%C3%B3n%20sobre%20el%20cat%C3%A1logo"
-                       class="btn btn-whatsapp"
-                       target="_blank"
-                       rel="noopener">
-                        Consultar por WhatsApp
-                    </a>
-
-                </div>
-
-                <div class="product-filters">
-
-                    <button class="filter-button active" data-category="todos">
-                        Todas
-                    </button>
-
-                    <button class="filter-button" data-category="enterizas">
-                        Enterizas
-                    </button>
-
-                    <button class="filter-button" data-category="short-top">
-                        Short Top
-                    </button>
-
-                    <button class="filter-button" data-category="pantalon-camiseta">
-                        Pantalón y Camiseta
-                    </button>
-
-                    <button class="filter-button" data-category="tres-piezas">
-                        Tres Piezas
-                    </button>
-
-                </div>
-
-                <div class="products-grid catalog-grid" id="productsGrid">
-
-                    <article class="product-card" data-category="enterizas">
-
-                        <div class="product-image">
-
-                            <span class="product-badge">
-                                Nueva
-                            </span>
-
-                               <img src="img/1.jpeg"
-                                   alt="Pijama Vaca">
-
-                            <button class="quick-cart"
-                                    data-id="1"
-                                    aria-label="Agregar Pijama Vaca">
-                                +
-                            </button>
-
-                        </div>
-
-                        <div class="product-info">
-
-                            <span class="product-category">
-                                Pijama enteriza
-                            </span>
-
-                            <h3>
-                                Pijama Vaca
-                            </h3>
-
-                            <p class="product-description">
-                                Pijama femenina en piel de durazno,
-                                suave, ligera y cómoda.
-                            </p>
-
-                            <div class="product-bottom">
-
-                                <strong>
-                                    $45.000
-                                </strong>
-
-                                <button class="add-cart" data-id="1">
-                                    Agregar
-                                </button>
-
-                            </div>
-
-                        </div>
-
-                    </article>
-
-                    <article class="product-card" data-category="enterizas">
-
-                        <div class="product-image">
-
-                               <img src="img/2.jpeg"
-                                   alt="Pijama Snoopy">
-
-                            <button class="quick-cart"
-                                    data-id="2"
-                                    aria-label="Agregar Pijama Snoopy">
-                                +
-                            </button>
-
-                        </div>
-
-                        <div class="product-info">
-
-                            <span class="product-category">
-                                Pijama Enteriza
-                            </span>
-
-                            <h3>
-                                Pijama Snoopy
-                            </h3>
-
-                            <p class="product-description">
-                                Diseño delicado con textura suave
-                                y confortable.
-                            </p>
-
-                            <div class="product-bottom">
-
-                                <strong>
-                                    $45.000
-                                </strong>
-
-                                <button class="add-cart" data-id="2">
-                                    Agregar
-                                </button>
-
-                            </div>
-
-                        </div>
-
-                    </article>
-
-                    <article class="product-card" data-category="tres-piezas">
-
-                        <div class="product-image">
-
-                            <span class="product-badge">
-                                Favorita
-                            </span>
-
-                               <img src="img/3.jpeg"
-                                   alt="Pijama Cherry">
-
-                            <button class="quick-cart"
-                                    data-id="3"
-                                    aria-label="Agregar Pijama Cherry">
-                                +
-                            </button>
-
-                        </div>
-
-                        <div class="product-info">
-
-                            <span class="product-category">
-                                Tres Piezas
-                            </span>
-
-                            <h3>
-                                Pijama Cherry
-                            </h3>
-
-                            <p class="product-description">
-                                Diseño femenino y elegante
-                                en piel de durazno.
-                            </p>
-
-                            <div class="product-bottom">
-
-                                <strong>
-                                    $70.000
-                                </strong>
-
-                                <button class="add-cart" data-id="3">
-                                    Agregar
-                                </button>
-
-                            </div>
-
-                        </div>
-
-                    </article>
-
-                    <article class="product-card" data-category="tres-piezas">
-
-                        <div class="product-image">
-
-                               <img src="img/4.jpeg"
-                                   alt="Pijama Love">
-
-                            <button class="quick-cart"
-                                    data-id="4"
-                                    aria-label="Agregar Pijama Love">
-                                +
-                            </button>
-
-                        </div>
-
-                        <div class="product-info">
-
-                            <span class="product-category">
-                                Tres Piezas
-                            </span>
-
-                            <h3>
-                                Pijama Love
-                            </h3>
-
-                            <p class="product-description">
-                                Diseño romántico con textura suave
-                                para descansar.
-                            </p>
-
-                            <div class="product-bottom">
-
-                                <strong>
-                                    $70.000
-                                </strong>
-
-                                <button class="add-cart" data-id="4">
-                                    Agregar
-                                </button>
-
-                            </div>
-
-                        </div>
-
-                    </article>
-
-                    <article class="product-card" data-category="short-top">
-
-                        <div class="product-image">
-
-                               <img src="img/5.jpeg"
-                                   alt="Pijama Pucca">
-
-                            <button class="quick-cart"
-                                    data-id="5"
-                                    aria-label="Agregar Pijama Pucca">
-                                +
-                            </button>
-
-                        </div>
-
-                        <div class="product-info">
-
-                            <span class="product-category">
-                                Short Top
-                            </span>
-
-                            <h3>
-                                Pijama Pucca
-                            </h3>
-
-                            <p class="product-description">
-                                Diseño clásico y versátil
-                                para cualquier noche.
-                            </p>
-
-                            <div class="product-bottom">
-
-                                <strong>
-                                    $45.000
-                                </strong>
-
-                                <button class="add-cart" data-id="5">
-                                    Agregar
-                                </button>
-
-                            </div>
-
-                        </div>
-
-                    </article>
-
-                    <article class="product-card" data-category="pantalon-camiseta">
-
-                        <div class="product-image">
-
-                               <img src="img/6.jpeg"
-                                   alt="Pijama Osito">
-
-                            <button class="quick-cart"
-                                    data-id="6"
-                                    aria-label="Agregar Pijama Osito">
-                                +
-                            </button>
-
-                        </div>
-
-                        <div class="product-info">
-
-                            <span class="product-category">
-                                Pantalón y Camiseta
-                            </span>
-
-                            <h3>
-                                Pijama Osito
-                            </h3>
-
-                            <p class="product-description">
-                                Diseño tierno y cómodo para
-                                acompañar tus noches.
-                            </p>
-
-                            <div class="product-bottom">
-
-                                <strong>
-                                    $65.000
-                                </strong>
-
-                                <button class="add-cart" data-id="6">
-                                    Agregar
-                                </button>
-
-                            </div>
-
-                        </div>
-
-                    </article>
-
-                </div>
-
-            </div>
-
-        </section>
-
-    </main>
-
-    <footer class="footer">
-
-        <div class="container footer-grid">
-
-            <div class="footer-brand">
-
-                <span class="logo-main">By Night</span>
-            
-                <p>
-                    Pijamas femeninas de piel de durazno
-                    para noches llenas de comodidad.
-                </p>
-
-            </div>
-
-            <div class="footer-links">
-
-                <h3>
-                    Tienda
-                </h3>
-
-                <a href="index.html">
-                    Inicio
-                </a>
-
-                <a href="catalogo.html">
-                    Catálogo
-                </a>
-
-                <a href="index.html#nosotros">
-                    Nosotras
-                </a>
-
-            </div>
-
-            <div class="footer-contact">
-
-                <h3>
-                    Contáctanos
-                </h3>
-
-                <a href="https://wa.me/573229494731"
-                         target="_blank"
-                         rel="noopener">
-                    WhatsApp
-                </a>
-
-            </div>
-
-        </div>
-
-        <div class="footer-bottom">
-
-            <p>
-                © 2026 By Night. Todos los derechos reservados.
-            </p>
-
-        </div>
-
-    </footer>
-
-    <div class="cart-overlay" id="cartOverlay"></div>
-
-    <aside class="cart-panel" id="cartPanel">
-
-        <div class="cart-header">
-
-            <div>
-
-                <span class="section-label">
-                    BY NIGHT
-                </span>
-
-                <h2>
-                    Tu carrito
-                </h2>
-
-            </div>
-
-            <button class="close-cart"
-                    id="closeCart"
-                    aria-label="Cerrar carrito">
-                ×
+<header class="header">
+    <div class="container header-container">
+
+        <a href="index.html" class="logo">
+            <span class="logo-main">By Night</span>
+            <span class="logo-sub">Pijamas femeninas</span>
+        </a>
+
+        <nav class="nav" id="nav">
+            <a href="index.html">Inicio</a>
+            <a href="catalogo.html" class="active">Catálogo</a>
+            <a href="index.html#nosotros">Nosotras</a>
+            <a href="index.html#contacto">Contacto</a>
+        </nav>
+
+        <div class="header-actions">
+
+            <button class="cart-button" id="openCart" aria-label="Abrir carrito">
+                <span class="cart-icon">🛍</span>
+                <span class="cart-text">Carrito</span>
+                <span class="cart-count" id="cartCount">0</span>
+            </button>
+
+            <button class="menu-button" id="menuButton" aria-label="Abrir menú">
+                <span></span>
+                <span></span>
+                <span></span>
             </button>
 
         </div>
 
-        <div class="cart-items" id="cartItems">
+    </div>
+</header>
 
-            <div class="empty-cart">
 
-                <span>
-                    🛍
+<main>
+
+<section class="catalog-hero">
+    <div class="container">
+
+        <span class="section-label">
+            BY NIGHT
+        </span>
+
+        <h1>
+            Nuestro catálogo
+        </h1>
+
+        <p>
+            Descubre nuestra colección de pijamas femeninas
+            y encuentra el diseño perfecto para tus noches.
+        </p>
+
+    </div>
+</section>
+
+
+<section class="catalog-section" id="coleccion">
+
+<div class="container">
+
+    <div class="catalog-top">
+
+        <div>
+            <span class="section-label">
+                COLECCIÓN
+            </span>
+
+            <h2>
+                Pijamas femeninas
+            </h2>
+        </div>
+
+    </div>
+
+
+    <div class="product-filters">
+
+        <button class="filter-button active" data-category="todos">
+            Todas
+        </button>
+
+        <button class="filter-button" data-category="enterizas">
+            Enterizas
+        </button>
+
+        <button class="filter-button" data-category="tres-piezas">
+            Tres piezas
+        </button>
+
+        <button class="filter-button" data-category="capri">
+            Capri
+        </button>
+
+        <button class="filter-button" data-category="cuatro-piezas">
+            Cuatro piezas
+        </button>
+
+        <button class="filter-button" data-category="shorts-top">
+            Shorts top
+        </button>
+
+        <button class="filter-button" data-category="batas">
+            Batas
+        </button>
+
+        <button class="filter-button" data-category="niños">
+            Niños
+        </button>
+    </div>
+
+
+    <div class="products-grid catalog-grid" id="productsGrid">
+
+
+        <!-- ========================= -->
+        <!-- ENTERIZAS -->
+        <!-- ========================= -->
+
+        <article class="product-card" data-category="enterizas">
+
+            <div class="product-image">
+                <span class="product-badge">Nueva</span>
+
+                <img src="img/1.jpeg" alt="Enteriza Sweet Candy">
+
+                <button class="quick-cart" data-id="1" aria-label="Agregar Enteriza Sweet Candy">
+                    +
+                </button>
+            </div>
+
+            <div class="product-info">
+
+                <span class="product-category">
+                    Enteriza
                 </span>
 
                 <h3>
-                    Tu carrito está vacío
+                    Enteriza Sweet Candy
                 </h3>
 
-                <p>
-                    Agrega una pijama para comenzar tu compra.
+                <p class="product-description">
+                    Diseño femenino y cómodo en tono rosa.
                 </p>
 
-                <button class="btn btn-primary"
-                        id="continueShopping">
-                    Ver catálogo
+                <div class="product-bottom">
+                    <strong>$45.000</strong>
+
+                    <button class="add-cart" data-id="1">
+                        Agregar
+                    </button>
+                </div>
+
+            </div>
+        </article>
+
+
+        <article class="product-card" data-category="enterizas">
+
+            <div class="product-image">
+
+                <img src="img/2.jpeg" alt="Enteriza Little Heart">
+
+                <button class="quick-cart" data-id="2" aria-label="Agregar Enteriza Little Heart">
+                    +
                 </button>
 
             </div>
 
-        </div>
+            <div class="product-info">
 
-        <div class="cart-footer">
-
-            <div class="cart-total">
-
-                <span>
-                    Total
+                <span class="product-category">
+                    Enteriza
                 </span>
 
-                <strong id="cartTotal">
-                    $0
-                </strong>
+                <h3>
+                    Little Heart
+                </h3>
+
+                <p class="product-description">
+                    Suave, ligera y perfecta para descansar.
+                </p>
+
+                <div class="product-bottom">
+                    <strong>$45.000</strong>
+
+                    <button class="add-cart" data-id="2">
+                        Agregar
+                    </button>
+                </div>
+
+            </div>
+        </article>
+
+
+        <article class="product-card" data-category="enterizas">
+
+            <div class="product-image">
+
+                <span class="product-badge">Favorita</span>
+
+                <img src="img/3.jpeg" alt="Enteriza Marie">
+
+                <button class="quick-cart" data-id="3" aria-label="Agregar Enteriza Marie">
+                    +
+                </button>
 
             </div>
 
+            <div class="product-info">
+
+                <span class="product-category">
+                    Enteriza
+                </span>
+
+                <h3>
+                    Marie
+                </h3>
+
+                <p class="product-description">
+                    Un diseño delicado es lo que necesitas.
+                </p>
+
+                <div class="product-bottom">
+                    <strong>$45.000</strong>
+
+                    <button class="add-cart" data-id="3">
+                        Agregar
+                    </button>
+                </div>
+
+            </div>
+        </article>
+
+
+        <article class="product-card" data-category="enterizas">
+
+            <div class="product-image">
+
+                <img src="img/4.jpeg" alt="Enteriza Piggie">
+
+                <button class="quick-cart" data-id="4" aria-label="Agregar Enteriza Piggie">
+                    +
+                </button>
+
+            </div>
+
+            <div class="product-info">
+
+                <span class="product-category">
+                    Enteriza
+                </span>
+
+                <h3>
+                    Piggie
+                </h3>
+
+                <p class="product-description">
+                    Dulce, cómoda y versátil para dormir.
+                </p>
+
+                <div class="product-bottom">
+                    <strong>$45.000</strong>
+
+                    <button class="add-cart" data-id="4">
+                        Agregar
+                    </button>
+                </div>
+
+            </div>
+        </article>
+
+
+        <article class="product-card" data-category="enterizas">
+
+            <div class="product-image">
+
+                <img src="img/5.jpeg" alt="Enteriza Strawberry Dreams">
+
+                <button class="quick-cart" data-id="5" aria-label="Agregar Enteriza Strawberry Dreams">
+                    +
+                </button>
+
+            </div>
+
+            <div class="product-info">
+
+                <span class="product-category">
+                    Enteriza
+                </span>
+
+                <h3>
+                    Strawberry Dreams
+                </h3>
+
+                <p class="product-description">
+                    Diseño sencillo y encantador.
+                </p>
+
+                <div class="product-bottom">
+                    <strong>$45.000</strong>
+
+                    <button class="add-cart" data-id="5">
+                        Agregar
+                    </button>
+                </div>
+
+            </div>
+        </article>
+
+
+        <article class="product-card" data-category="enterizas">
+
+            <div class="product-image">
+
+                <img src="img/7.jpeg" alt="Enteriza Panda Negro">
+
+                <button class="quick-cart" data-id="6" aria-label="Agregar Enteriza Panda Negro">
+                    +
+                </button>
+
+            </div>
+
+            <div class="product-info">
+
+                <span class="product-category">
+                    Enteriza
+                </span>
+
+                <h3>
+                    Panda Negro
+                </h3>
+
+                <p class="product-description">
+                    Diseño adorable con estampado de panda negro.
+                </p>
+
+                <div class="product-bottom">
+                    <strong>$45.000</strong>
+
+                    <button class="add-cart" data-id="6">
+                        Agregar
+                    </button>
+                </div>
+
+            </div>
+        </article>
+
+
+        <article class="product-card" data-category="enterizas">
+
+            <div class="product-image">
+
+                <img src="img/6.jpeg" alt="Enteriza Tiny Avocado">
+
+                <button class="quick-cart" data-id="7" aria-label="Agregar Enteriza Tiny Avocado">
+                    +
+                </button>
+
+            </div>
+
+            <div class="product-info">
+
+                <span class="product-category">
+                    Enteriza
+                </span>
+
+                <h3>
+                    Tiny Avocado
+                </h3>
+
+                <p class="product-description">
+                    Diseño adorable con estampado de aguacate.
+                </p>
+
+                <div class="product-bottom">
+                    <strong>$45.000</strong>
+
+                    <button class="add-cart" data-id="7">
+                        Agregar
+                    </button>
+                </div>
+
+            </div>
+        </article>
+
+        <!-- ========================= -->
+        <!-- TRES PIEZAS -->
+        <!-- ========================= -->
+
+        <article class="product-card" data-category="tres-piezas">
+
+            <div class="product-image">
+
+                <span class="product-badge">Nueva</span>
+
+                <img src="img/8.jpeg" alt="Tres piezas Rosa Cherry">
+
+                <button class="quick-cart" data-id="8" aria-label="Agregar Tres piezas Rosa Cherry">
+                    +
+                </button>
+
+            </div>
+
+            <div class="product-info">
+
+                <span class="product-category">
+                    Tres piezas
+                </span>
+
+                <h3>
+                    Rose Cherry
+                </h3>
+
+                <p class="product-description">
+                    Conjunto de tres piezas para mayor comodidad.
+                </p>
+
+                <div class="product-bottom">
+                    <strong>$55.000</strong>
+
+                    <button class="add-cart" data-id="8">
+                        Agregar
+                    </button>
+                </div>
+
+            </div>
+        </article>
+
+
+        <article class="product-card" data-category="tres-piezas">
+
+            <div class="product-image">
+
+                <img src="img/9.jpeg" alt="Tres piezas Solo Love">
+
+                <button class="quick-cart" data-id="9" aria-label="Agregar Tres piezas Solo Love">
+                    +
+                </button>
+
+            </div>
+
+            <div class="product-info">
+
+                <span class="product-category">
+                    Tres piezas
+                </span>
+
+                <h3>
+                    Solo Love
+                </h3>
+
+                <p class="product-description">
+                    Conjunto delicado en tono rosa.
+                </p>
+
+                <div class="product-bottom">
+                    <strong>$55.000</strong>
+
+                    <button class="add-cart" data-id="9">
+                        Agregar
+                    </button>
+                </div>
+
+            </div>
+        </article>
+
+
+        <article class="product-card" data-category="tres-piezas">
+
+            <div class="product-image">
+
+                <img src="img/10.jpeg" alt="Tres piezas Hello Kitty">
+
+                <button class="quick-cart" data-id="10" aria-label="Agregar Tres piezas Hello Kitty">
+                    +
+                </button>
+
+            </div>
+
+            <div class="product-info">
+
+                <span class="product-category">
+                    Tres piezas
+                </span>
+
+                <h3>
+                    Hello Kitty Set
+                </h3>
+
+                <p class="product-description">
+                    Conjunto adorable con estampado de Hello Kitty.
+                </p>
+
+                <div class="product-bottom">
+                    <strong>$55.000</strong>
+
+                    <button class="add-cart" data-id="10">
+                        Agregar
+                    </button>
+                </div>
+
+            </div>
+        </article>
+
+
+        <article class="product-card" data-category="tres-piezas">
+
+            <div class="product-image">
+
+                <img src="img/11.jpeg" alt="Tres piezas Osito">
+
+                <button class="quick-cart" data-id="11" aria-label="Agregar Tres piezas Osito">
+                    +
+                </button>
+
+            </div>
+
+            <div class="product-info">
+
+                <span class="product-category">
+                    Tres piezas
+                </span>
+
+                <h3>
+                    Osito Elegance
+                </h3>
+
+                <p class="product-description">
+                    Diseño tierno y cómodo.
+                </p>
+
+                <div class="product-bottom">
+                    <strong>$55.000</strong>
+
+                    <button class="add-cart" data-id="11">
+                        Agregar
+                    </button>
+                </div>
+
+            </div>
+        </article>
+
+
+        <article class="product-card" data-category="tres-piezas">
+
+            <div class="product-image">
+
+                <img src="img/12.jpeg" alt="Tres piezas Dulce Latido">
+
+                <button class="quick-cart" data-id="12" aria-label="Agregar Tres piezas Dulce Latido">
+                    +
+                </button>
+
+            </div>
+
+            <div class="product-info">
+
+                <span class="product-category">
+                    Tres piezas
+                </span>
+
+                <h3>
+                    Dulce Latido
+                </h3>
+
+                <p class="product-description">
+                    Pijama romántica de corazones y máxima comodidad.
+                </p>
+
+                <div class="product-bottom">
+                    <strong>$55.000</strong>
+
+                    <button class="add-cart" data-id="12">
+                        Agregar
+                    </button>
+                </div>
+
+            </div>
+        </article>
+
+
+        <article class="product-card" data-category="tres-piezas">
+
+            <div class="product-image">
+
+                <img src="img/13.jpeg" alt="Tres piezas Dulce Lazo">
+
+                <button class="quick-cart" data-id="13" aria-label="Agregar Tres piezas Dulce Lazo">
+                    +
+                </button>
+
+            </div>
+
+            <div class="product-info">
+
+                <span class="product-category">
+                    Tres piezas
+                </span>
+
+                <h3>
+                    Dulce Lazo
+                </h3>
+
+                <p class="product-description">
+                    Pijama romántica con lazo y máxima comodidad.
+                </p>
+
+                <div class="product-bottom">
+                    <strong>$55.000</strong>
+
+                    <button class="add-cart" data-id="13">
+                        Agregar
+                    </button>
+                </div>
+
+            </div>
+        </article>
+
+        <!-- ========================= -->
+        <!-- CAPRI -->
+        <!-- ========================= -->
+        <article class="product-card" data-category="capri">
+
+            <div class="product-image">
+
+                <span class="product-badge">Favorita</span>
+
+                <img src="img/14.jpeg" alt="Capri Cherry">
+
+                <button class="quick-cart" data-id="14" aria-label="Agregar Capri Cherry">
+                    +
+                </button>
+
+            </div>
+
+            <div class="product-info">
+
+                <span class="product-category">
+                    Capri
+                </span>
+
+                <h3>
+                    Capri Cherry
+                </h3>
+
+                <p class="product-description">
+                    Pijama capri femenina y ligera.
+                </p>
+
+                <div class="product-bottom">
+                    <strong>$50.000</strong>
+
+                    <button class="add-cart" data-id="14">
+                        Agregar
+                    </button>
+                </div>
+
+            </div>
+        </article>
+        <article class="product-card" data-category="capri">
+
+            <div class="product-image">
+
+                <span class="product-badge">Favorita</span>
+
+                <img src="img/15.jpeg" alt="Capri Lotso">
+
+                <button class="quick-cart" data-id="15" aria-label="Agregar Capri Lotso">
+                    +
+                </button>
+
+            </div>
+
+            <div class="product-info">
+
+                <span class="product-category">
+                    Capri
+                </span>
+
+                <h3>
+                    Lotso
+                </h3>
+
+                <p class="product-description">
+                    Pijama ultra suave inspirada en el tierno oso de Toy Story
+                </p>
+
+                <div class="product-bottom">
+                    <strong>$50.000</strong>
+
+                    <button class="add-cart" data-id="15">
+                        Agregar
+                    </button>
+                </div>
+
+            </div>
+        </article>
+
+
+        <article class="product-card" data-category="capri">
+
+            <div class="product-image">
+
+                <img src="img/16.jpeg" alt="Capri Only Love">
+
+                <button class="quick-cart" data-id="16" aria-label="Agregar Capri Only Love">
+                    +
+                </button>
+
+            </div>
+
+            <div class="product-info">
+
+                <span class="product-category">
+                    Capri
+                </span>
+
+                <h3>
+                    Only Love Capri
+                </h3>
+
+                <p class="product-description">
+                    Fresca y cómoda para descansar.
+                </p>
+
+                <div class="product-bottom">
+                    <strong>$50.000</strong>
+
+                    <button class="add-cart" data-id="16">
+                        Agregar
+                    </button>
+                </div>
+
+            </div>
+        </article>
+
+
+        <article class="product-card" data-category="capri">
+
+            <div class="product-image">
+                <img src="img/17.jpeg" alt="Capri Dulce Vaquita">
+
+                <button class="quick-cart" data-id="17" aria-label="Agregar Capri Dulce Vaquita">
+                    +
+                </button>
+
+            </div>
+
+            <div class="product-info">
+
+                <span class="product-category">
+                    Capri
+                </span>
+
+                <h3>
+                    Dulce Vaquita
+                </h3>
+
+                <p class="product-description">
+                    Pijama tierna con estampado de vaquita y tela ultrasuave para descansar con estilo.
+                </p>
+
+                <div class="product-bottom">
+                    <strong>$50.000</strong>
+
+                    <button class="add-cart" data-id="17">
+                        Agregar
+                    </button>
+                </div>
+
+            </div>
+        </article>
+
+
+        <article class="product-card" data-category="capri">
+
+            <div class="product-image">
+
+                <img src="img/18.jpeg" alt="Capri Mickey Gucci">
+
+                <button class="quick-cart" data-id="18" aria-label="Agregar Capri Mickey Gucci">
+                    +
+                </button>
+
+            </div>
+
+            <div class="product-info">
+
+                <span class="product-category">
+                    Capri
+                </span>
+
+                <h3>
+                    Mickey Gucci
+                </h3>
+
+                <p class="product-description">
+                    Pijama con un diseño chic inspirado en el icónico ratón de Disney.
+                </p>
+
+                <div class="product-bottom">
+                    <strong>$50.000</strong>
+
+                    <button class="add-cart" data-id="18">
+                        Agregar
+                    </button>
+                </div>
+
+            </div>
+        </article>
+
+
+        <article class="product-card" data-category="capri">
+
+            <div class="product-image">
+
+                <img src="img/19.jpeg" alt="Capri Avocado">
+
+                <button class="quick-cart" data-id="19" aria-label="Agregar Capri Avocado">
+                    +
+                </button>
+
+            </div>
+
+            <div class="product-info">
+
+                <span class="product-category">
+                    Capri
+                </span>
+
+                <h3>
+                    Avocado Capri
+                </h3>
+
+                <p class="product-description">
+                    Pijama con un diseño fresco y moderno inspirado en el aguacate.
+                </p>
+
+                <div class="product-bottom">
+                    <strong>$50.000</strong>
+
+                    <button class="add-cart" data-id="19">
+                        Agregar
+                    </button>
+                </div>
+
+            </div>
+        </article>
+
+
+        <article class="product-card" data-category="capri">
+
+            <div class="product-image">
+
+                <img src="img/20.jpeg" alt="Capri Ribbon Dreams">
+
+                <button class="quick-cart" data-id="20" aria-label="Agregar Capri Ribbon Dreams">
+                    +
+                </button>
+
+            </div>
+
+            <div class="product-info">
+
+                <span class="product-category">
+                    Capri
+                </span>
+
+                <h3>
+                    Ribbon Dreams Capri
+                </h3>
+
+                <p class="product-description">
+                    Pijama con un diseño romántico y elegante inspirado en lazos y sueños.
+                </p>
+
+                <div class="product-bottom">
+                    <strong>$50.000</strong>
+
+                    <button class="add-cart" data-id="20">
+                        Agregar
+                    </button>
+                </div>
+
+            </div>
+        </article>
+
+
+        <article class="product-card" data-category="capri">
+
+            <div class="product-image">
+
+                <img src="img/21.jpeg" alt="Capri Minnie Mouse">
+
+                <button class="quick-cart" data-id="21" aria-label="Agregar Capri Minnie Mouse">
+                    +
+                </button>
+
+            </div>
+
+            <div class="product-info">
+
+                <span class="product-category">
+                    Capri
+                </span>
+
+                <h3>
+                    Minnie Mouse Capri
+                </h3>
+
+                <p class="product-description">
+                    Pijama con un diseño encantador inspirado en Minnie Mouse.
+                </p>
+
+                <div class="product-bottom">
+                    <strong>$50.000</strong>
+
+                    <button class="add-cart" data-id="21">
+                        Agregar
+                    </button>
+                </div>
+
+            </div>
+        </article>
+
+
+
+        <!-- ========================= -->
+        <!-- CUATRO PIEZAS -->
+        <!-- ========================= -->
+
+        <article class="product-card" data-category="cuatro-piezas">
+
+            <div class="product-image">
+
+                <span class="product-badge">Nueva</span>
+
+                <img src="img/22.jpeg" alt="Cuatro piezas Minnie">
+
+                <button class="quick-cart" data-id="22" aria-label="Agregar Cuatro piezas Minnie">
+                    +
+                </button>
+
+            </div>
+
+            <div class="product-info">
+
+                <span class="product-category">
+                    Cuatro piezas
+                </span>
+
+                <h3>
+                    Minnie Mouse
+                </h3>
+
+                <p class="product-description">
+                    Set completo de cuatro piezas.
+                </p>
+
+                <div class="product-bottom">
+                    <strong>$75.000</strong>
+
+                    <button class="add-cart" data-id="22">
+                        Agregar
+                    </button>
+                </div>
+
+            </div>
+        </article>
+
+
+        <article class="product-card" data-category="cuatro-piezas">
+
+            <div class="product-image">
+
+                <img src="img/23.jpeg" alt="Cuatro piezas Stitch">
+
+                <button class="quick-cart" data-id="23" aria-label="Agregar Cuatro piezas Stitch">
+                    +
+                </button>
+
+            </div>
+
+            <div class="product-info">
+
+                <span class="product-category">
+                    Cuatro piezas
+                </span>
+
+                <h3>
+                    Ohana Blue
+                </h3>
+
+                <p class="product-description">
+                    Set completo de cuatro piezas con diseño de Stitch y máxima comodidad.
+                </p>
+
+                <div class="product-bottom">
+                    <strong>$75.000</strong>
+
+                    <button class="add-cart" data-id="23">
+                        Agregar
+                    </button>
+                </div>
+
+            </div>
+        </article>
+
+
+        <article class="product-card" data-category="cuatro-piezas">
+
+            <div class="product-image">
+
+                <img src="img/24.jpeg" alt="Cuatro piezas Sexy Cherry">
+
+                <button class="quick-cart" data-id="24" aria-label="Agregar Cuatro piezas Sexy Cherry">
+                    +
+                </button>
+
+            </div>
+
+            <div class="product-info">
+
+                <span class="product-category">
+                    Cuatro piezas
+                </span>
+
+                <h3>
+                    Sexy Cherry
+                </h3>
+
+                <p class="product-description">
+                    Set completo de cuatro piezas con un diseño sensual y atractivo.
+                </p>
+
+                <div class="product-bottom">
+                    <strong>$75.000</strong>
+
+                    <button class="add-cart" data-id="24">
+                        Agregar
+                    </button>
+                </div>
+
+            </div>
+        </article>
+
+
+        <article class="product-card" data-category="cuatro-piezas">
+
+            <div class="product-image">
+
+                <img src="img/25.jpeg" alt="Cuatro piezas Lotso Toy Story">
+
+                <button class="quick-cart" data-id="25" aria-label="Agregar Cuatro piezas Lotso Toy Story">
+                    +
+                </button>
+
+            </div>
+
+            <div class="product-info">
+
+                <span class="product-category">
+                    Cuatro piezas
+                </span>
+
+                <h3>
+                    Lotso - Toy Story
+                </h3>
+
+                <p class="product-description">
+                    Set completo de cuatro piezas con diseño de Lotso.
+                </p>
+
+                <div class="product-bottom">
+                    <strong>$75.000</strong>
+
+                    <button class="add-cart" data-id="25">
+                        Agregar
+                    </button>
+                </div>
+
+            </div>
+        </article>
+
+
+        <article class="product-card" data-category="cuatro-piezas">
+
+            <div class="product-image">
+
+                <img src="img/26.jpeg" alt="Cuatro piezas Ohana Floral">
+
+                <button class="quick-cart" data-id="26" aria-label="Agregar Cuatro piezas Ohana Floral">
+                    +
+                </button>
+
+            </div>
+
+            <div class="product-info">
+
+                <span class="product-category">
+                    Cuatro piezas
+                </span>
+
+                <h3>
+                    Ohana Floral!
+                </h3>
+
+                <p class="product-description">
+                    Conjunto de cuatro piezas con estampado floral de Stitch y máxima suavidad.
+                </p>
+
+                <div class="product-bottom">
+                    <strong>$75.000</strong>
+
+                    <button class="add-cart" data-id="26">
+                        Agregar
+                    </button>
+                </div>
+
+            </div>
+        </article>
+
+
+        <article class="product-card" data-category="cuatro-piezas">
+
+            <div class="product-image">
+
+                <img src="img/27.jpeg" alt="Cuatro piezas Kitty Avocado">
+
+                <button class="quick-cart" data-id="27" aria-label="Agregar Cuatro piezas Kitty Avocado">
+                    +
+                </button>
+
+            </div>
+
+            <div class="product-info">
+
+                <span class="product-category">
+                    Cuatro piezas
+                </span>
+
+                <h3>
+                    Kitty Avocado
+                </h3>
+
+                <p class="product-description">
+                    Set femenino para descansar con estilo.
+                </p>
+
+                <div class="product-bottom">
+                    <strong>$116.000</strong>
+
+                    <button class="add-cart" data-id="27">
+                        Agregar
+                    </button>
+                </div>
+
+            </div>
+        </article>
+
+
+
+        <!-- ========================= -->
+        <!-- SHORTS TOP -->
+        <!-- ========================= -->
+
+        <article class="product-card" data-category="shorts-top">
+
+            <div class="product-image">
+
+                <span class="product-badge">Nueva</span>
+
+                <img src="img/28.jpeg" alt="Shorts Top Kitty">
+
+                <button class="quick-cart" data-id="28" aria-label="Agregar Shorts Top Kitty">
+                    +
+                </button>
+
+            </div>
+
+            <div class="product-info">
+
+                <span class="product-category">
+                    Shorts top
+                </span>
+
+                <h3>
+                    Hello Kitty Red
+                </h3>
+
+                <p class="product-description">
+                    Conjunto fresco de short y top.
+                </p>
+
+                <div class="product-bottom">
+                    <strong>$40.000</strong>
+
+                    <button class="add-cart" data-id="28">
+                        Agregar
+                    </button>
+                </div>
+
+            </div>
+        </article>
+
+
+        <article class="product-card" data-category="shorts-top">
+
+            <div class="product-image">
+
+                <img src="img/29.jpeg" alt="Shorts Top Pucca">
+
+                <button class="quick-cart" data-id="29" aria-label="Agregar Shorts Top Pucca">
+                    +
+                </button>
+
+            </div>
+
+            <div class="product-info">
+
+                <span class="product-category">
+                    Shorts top
+                </span>
+
+                <h3>
+                    Pucca & Garu
+                </h3>
+
+                <p class="product-description">
+                    Pijama ligera y cómoda para dormir.
+                </p>
+
+                <div class="product-bottom">
+                    <strong>$40.000</strong>
+
+                    <button class="add-cart" data-id="29">
+                        Agregar
+                    </button>
+                </div>
+
+            </div>
+        </article>
+
+
+        <article class="product-card" data-category="shorts-top">
+
+            <div class="product-image">
+
+                <img src="img/30.jpeg" alt="Shorts Top Angela">
+
+                <button class="quick-cart" data-id="30" aria-label="Agregar Shorts Top Angela">
+                    +
+                </button>
+
+            </div>
+
+            <div class="product-info">
+
+                <span class="product-category">
+                    Shorts top
+                </span>
+
+                <h3>
+                    Angela
+                </h3>
+
+                <p class="product-description">
+                    Diseño femenino en tono rosado con el perosnaje Angela de Stitch.
+                </p>
+
+                <div class="product-bottom">
+                    <strong>$40.000</strong>
+
+                    <button class="add-cart" data-id="30">
+                        Agregar
+                    </button>
+                </div>
+
+            </div>
+        </article>
+
+
+        <article class="product-card" data-category="shorts-top">
+
+            <div class="product-image">
+
+                <img src="img/31.jpeg" alt="Shorts Top Stich">
+
+                <button class="quick-cart" data-id="31" aria-label="Agregar Shorts Top Stitch">
+                    +
+                </button>
+
+            </div>
+
+            <div class="product-info">
+
+                <span class="product-category">
+                    Shorts top
+                </span>
+
+                <h3>
+                    Pink Stitch
+                </h3>
+
+                <p class="product-description">
+                    Clásico, sencillo y elegante.
+                </p>
+
+                <div class="product-bottom">
+                    <strong>$40.000</strong>
+
+                    <button class="add-cart" data-id="31">
+                        Agregar
+                    </button>
+                </div>
+
+            </div>
+        </article>
+
+
+        <article class="product-card" data-category="shorts-top">
+
+            <div class="product-image">
+
+                <img src="img/32.jpeg" alt="Shorts Top Blue Stitch">
+
+                <button class="quick-cart" data-id="32" aria-label="Agregar Shorts Top Blue Stitch">
+                    +
+                </button>
+
+            </div>
+
+            <div class="product-info">
+
+                <span class="product-category">
+                    Shorts top
+                </span>
+
+                <h3>
+                    Blue Stitch
+                </h3>
+
+                <p class="product-description">
+                    Pijama delicado del personaje de stitch en tono azul.
+                </p>
+
+                <div class="product-bottom">
+                    <strong>$40.000</strong>
+
+                    <button class="add-cart" data-id="32">
+                        Agregar
+                    </button>
+                </div>
+
+            </div>
+        </article>
+
+        <!-- ========================= -->
+        <!-- BATAS -->
+        <!-- ========================= -->
+         <article class="product-card" data-category="batas">
+
+            <div class="product-image">
+
+                <span class="product-badge">Nueva</span>
+
+                <img src="img/33.jpeg" alt="Bata Oink">
+
+                <button class="quick-cart" data-id="33" aria-label="Agregar Bata Oink">
+                    +
+                </button>
+
+            </div>
+
+            <div class="product-info">
+
+                <span class="product-category">
+                    Bata
+                </span>
+
+                <h3>
+                    Oink!
+                </h3>
+
+                <p class="product-description">
+                    Bata suave  para tus noches.
+                </p>
+
+                <div class="product-bottom">
+                    <strong>$45.000</strong>
+
+                    <button class="add-cart" data-id="33">
+                        Agregar
+                    </button>
+                </div>
+            </div>
+        </article>
+
+                <article class="product-card" data-category="batas">
+
+            <div class="product-image">
+
+                <span class="product-badge">Nueva</span>
+
+                <img src="img/34.jpeg" alt="Bata Fresita">
+
+                <button class="quick-cart" data-id="34" aria-label="Agregar Bata Fresita">
+                    +
+                </button>
+
+            </div>
+
+            <div class="product-info">
+
+                <span class="product-category">
+                    Bata
+                </span>
+
+                <h3>
+                    Rose Fresita
+                </h3>
+
+                <p class="product-description">
+                    Bata suave de fresitas para tus noches.
+                </p>
+
+                <div class="product-bottom">
+                    <strong>$45.000</strong>
+
+                    <button class="add-cart" data-id="34">
+                        Agregar
+                    </button>
+                </div>
+            </div>
+        </article>
+
+        <article class="product-card" data-category="batas">
+
+            <div class="product-image">
+
+                <span class="product-badge">Nueva</span>
+
+                <img src="img/35.jpeg" alt="Bata Pandita">
+
+                <button class="quick-cart" data-id="35" aria-label="Agregar Bata Pandita">
+                    +
+                </button>
+
+            </div>
+
+            <div class="product-info">
+
+                <span class="product-category">
+                    Bata
+                </span>
+
+                <h3>
+                    Pandi Sueños
+                </h3>
+
+                <p class="product-description">
+                    Bata suave de Panditas y corazones.
+                </p>
+
+                <div class="product-bottom">
+                    <strong>$45.000</strong>
+
+                    <button class="add-cart" data-id="35">
+                        Agregar
+                    </button>
+                </div>
+
+            </div>
+        </article>
+
+
+        <article class="product-card" data-category="batas">
+
+            <div class="product-image">
+
+                <img src="img/36.jpeg" alt="Bata Vaquita">
+
+                <button class="quick-cart" data-id="36" aria-label="Agregar Bata Vaquita">
+                    +
+                </button>
+
+            </div>
+
+            <div class="product-info">
+
+                <span class="product-category">
+                    Bata
+                </span>
+
+                <h3>
+                    Vaquita Sweet
+                </h3>
+
+                <p class="product-description">
+                    Bata ligera con estampado de manchas de vaquita.
+                </p>
+
+                <div class="product-bottom">
+                    <strong>$45.000</strong>
+
+                    <button class="add-cart" data-id="36">
+                        Agregar
+                    </button>
+                </div>
+
+            </div>
+        </article>
+
+
+        <article class="product-card" data-category="batas">
+
+            <div class="product-image">
+
+                <img src="img/37.jpeg" alt="Bata Mickey Gucci"> 
+
+                <button class="quick-cart" data-id="37" aria-label="Agregar Bata Lavanda">
+                    +
+                </button>
+
+            </div>
+
+            <div class="product-info">
+
+                <span class="product-category">
+                    Bata
+                </span>
+
+                <h3>
+                    Lavender Robe
+                </h3>
+
+                <p class="product-description">
+                    Diseño delicado y femenino.
+                </p>
+
+                <div class="product-bottom">
+                    <strong>$90.000</strong>
+
+                    <button class="add-cart" data-id="37">
+                        Agregar
+                    </button>
+                </div>
+
+            </div>
+        </article>
+
+
+        <article class="product-card" data-category="batas">
+
+            <div class="product-image">
+
+                <img src="img/38.jpeg" alt="Bata Negra">
+
+                <button class="quick-cart" data-id="38" aria-label="Agregar Bata Negra">
+                    +
+                </button>
+
+            </div>
+
+            <div class="product-info">
+
+                <span class="product-category">
+                    Bata
+                </span>
+
+                <h3>
+                    Black Robe
+                </h3>
+
+                <p class="product-description">
+                    Elegante y sofisticada para descansar.
+                </p>
+
+                <div class="product-bottom">
+                    <strong>$92.000</strong>
+
+                    <button class="add-cart" data-id="38">
+                        Agregar
+                    </button>
+                </div>
+
+            </div>
+        </article>
+
+
+        <article class="product-card" data-category="batas">
+
+            <div class="product-image">
+
+                <img src="img/39.jpeg" alt="Bata Floral">
+
+                <button class="quick-cart" data-id="39" aria-label="Agregar Bata Floral">
+                    +
+                </button>
+
+            </div>
+
+            <div class="product-info">
+
+                <span class="product-category">
+                    Bata
+                </span>
+
+                <h3>
+                    Floral Robe
+                </h3>
+
+                <p class="product-description">
+                    Estampado floral suave y femenino.
+                </p>
+
+                <div class="product-bottom">
+                    <strong>$95.000</strong>
+
+                    <button class="add-cart" data-id="39">
+                        Agregar
+                    </button>
+                </div>
+
+            </div>
+        </article>
+
+
+        <article class="product-card" data-category="batas">
+
+            <div class="product-image">
+
+                <span class="product-badge">Favorita</span>
+
+                <img src="img/39.jpeg" alt="Bata Premium">
+
+                <button class="quick-cart" data-id="40" aria-label="Agregar Bata Premium">
+                    +
+                </button>
+
+            </div>
+
+            <div class="product-info">
+
+                <span class="product-category">
+                    Bata
+                </span>
+
+                <h3>
+                    By Night Premium
+                </h3>
+
+                <p class="product-description">
+                    Diseño exclusivo, suave y elegante.
+                </p>
+
+                <div class="product-bottom">
+                    <strong>$100.000</strong>
+
+                    <button class="add-cart" data-id="40">
+                        Agregar
+                    </button>
+                </div>
+
+            </div>
+        </article>
+
+
+    </div>
+
+</div>
+
+</section>
+
+</main>
+
+
+<footer class="footer">
+
+    <div class="container footer-grid">
+
+        <div class="footer-brand">
+
+            <span class="logo-main">
+                By Night
+            </span>
+
+            <p>
+                Pijamas femeninas para noches llenas de comodidad.
+            </p>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <h3>
+                Tienda
+            </h3>
+
+            <a href="index.html">
+                Inicio
+            </a>
+
+            <a href="catalogo.html">
+                Catálogo
+            </a>
+
+            <a href="index.html#nosotros">
+                Nosotras
+            </a>
+
+        </div>
+
+
+        <div class="footer-contact">
+
+            <h3>
+                Contáctanos
+            </h3>
+
+            <a href="https://wa.me/573229494731"
+               target="_blank"
+               rel="noopener">
+                WhatsApp
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 By Night. Todos los derechos reservados.
+        </p>
+
+    </div>
+
+</footer>
+
+
+<div class="cart-overlay" id="cartOverlay"></div>
+
+
+<aside class="cart-panel" id="cartPanel">
+
+    <div class="cart-header">
+
+        <div>
+
+            <span class="section-label">
+                BY NIGHT
+            </span>
+
+            <h2>
+                Tu carrito
+            </h2>
+
+        </div>
+
+        <button class="close-cart"
+                id="closeCart"
+                aria-label="Cerrar carrito">
+            ×
+        </button>
+
+    </div>
+
+
+    <div class="cart-items" id="cartItems">
+
+        <div class="empty-cart">
+
+            <span>
+                🛍
+            </span>
+
+            <h3>
+                Tu carrito está vacío
+            </h3>
+
+            <p>
+                Agrega una pijama para comenzar tu compra.
+            </p>
+
+            <button class="btn btn-primary" id="continueShopping">
+                Ver catálogo
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <div class="cart-footer">
+
+        <div class="cart-total">
+
+            <span>
+                Total
+            </span>
+
+            <strong id="cartTotal">
+                $0
+            </strong>
+
+        </div>
+
+        <div class="payment-actions">
             <a href="https://wa.me/573229494731"
                class="checkout-whatsapp"
                id="checkoutWhatsapp"
                target="_blank"
                rel="noopener">
-                Finalizar pedido por WhatsApp
+                WhatsApp
             </a>
 
+            <button type="button" class="checkout-nequi" id="checkoutNequi">
+                Nequi
+            </button>
         </div>
 
-    </aside>
+    </div>
 
-    <a href="https://wa.me/573229494731?text=Hola%20By%20Night%2C%20quiero%20informaci%C3%B3n%20sobre%20sus%20pijamas"
-       class="whatsapp-float"
-       target="_blank"
-                    rel="noopener"
-       aria-label="Contactar por WhatsApp">
-        <span>WhatsApp</span>
-    </a>
+</aside>
 
-    <script src="script.js"></script>
+<div class="nequi-modal" id="nequiModal" aria-hidden="true">
+    <div class="nequi-backdrop" id="nequiBackdrop"></div>
+
+    <div class="nequi-panel" role="dialog" aria-modal="true" aria-labelledby="nequiTitle">
+        <div class="nequi-header">
+            <h3 id="nequiTitle">Paga con Nequi</h3>
+            <button type="button" class="nequi-close" id="nequiClose" aria-label="Cerrar pago por Nequi">×</button>
+        </div>
+
+        <div class="nequi-body">
+            <div class="nequi-brand" aria-hidden="true">
+                <span class="nequi-brand-mark">N</span>
+                <span>Nequi</span>
+            </div>
+
+            <p class="nequi-intro">
+                Realiza tu transferencia y envíanos el comprobante para confirmar tu pedido.
+            </p>
+
+            <div class="nequi-pay-info">
+                <div class="nequi-payment-row">
+                    <span>Total</span>
+                    <strong id="nequiTotal">$0</strong>
+                </div>
+
+                <div class="nequi-payment-row">
+                    <span>Celular Nequi</span>
+                        <div class="nequi-number">
+                            <strong id="nequiPhone">3001234567</strong>
+                            <button type="button" class="copy-nequi" id="copyNequi">Copiar número</button>
+                        </div>
+                </div>
+            </div>
+
+                <ol class="nequi-steps">
+                    <li>Abre Nequi y envía el total indicado.</li>
+                    <li>Guarda el comprobante de la transferencia.</li>
+                    <li>Confirma el pago por WhatsApp.</li>
+                </ol>
+
+            <div class="nequi-actions">
+                     <a href="#"
+                   class="nequi-action primary"
+                         id="nequiConfirm"
+                   target="_blank"
+                   rel="noopener">
+                    Confirmar pago
+                </a>
+
+                <button type="button" class="nequi-action secondary" id="nequiCancel">
+                    Cerrar
+                </button>
+            </div>
+
+            <p class="nequi-note">
+                Envía el comprobante por WhatsApp después de realizar el pago.
+            </p>
+        </div>
+    </div>
+</div>
+
+
+<a href="https://wa.me/573229494731?text=Hola%20By%20Night%2C%20quiero%20informaci%C3%B3n%20sobre%20sus%20pijamas"
+   class="whatsapp-float"
+   target="_blank"
+   rel="noopener"
+   aria-label="Contactar por WhatsApp">
+    <span>
+        WhatsApp
+    </span>
+</a>
+
+
+<script src="script.js"></script>
 
 </body>
 </html>
+

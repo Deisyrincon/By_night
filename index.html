@@ -1,706 +1,891 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>By Night | Pijamas Femeninas</title>
-    <meta name="description" content="By Night - Pijamas femeninas en piel de durazno, suaves, cómodas y perfectas para descansar.">
+
+    <meta name="description"
+        content="By Night - Pijamas femeninas en piel de durazno, suaves, cómodas y perfectas para descansar.">
+
+    <link rel="icon" type="image/png" href="img/logo.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
 </head>
-<link rel="icon" type="image/png" href="img/logo.png">
+
 <body>
 
-<header class="header" id="inicio">
-    <div class="container header-container">
+    <header class="header" id="inicio">
 
-        <a href="#inicio" class="logo">
-            <span class="logo-main">By Night</span>
-            <span class="logo-sub">Pijamas femeninas</span>
-        </a>
+        <div class="container header-container">
 
-        <nav class="nav" id="nav">
-            <a href="#inicio">Inicio</a>
-            <a href="catalogo.html">Catálogo</a>
-            <a href="#nosotros">Nosotras</a>
-            <a href="#contacto">Contacto</a>
-        </nav>
-
-        <div class="header-actions">
-
-            <button class="cart-button" id="openCart" aria-label="Abrir carrito">
-                <span class="cart-icon">🛍</span>
-                <span class="cart-text">Carrito</span>
-                <span class="cart-count" id="cartCount">0</span>
-            </button>
-
-            <button class="menu-button" id="menuButton" aria-label="Abrir menú">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-
-        </div>
-
-    </div>
-</header>
-
-<main>
-
-<section class="hero">
-    <div class="container hero-content">
-
-        <div class="hero-text">
-
-            <span class="hero-label">BY NIGHT</span>
-
-            <h1>
-                Suavidad que
-                <strong>acompaña tus noches.</strong>
-            </h1>
-
-            <p>
-                Descubre nuestra colección de pijamas femeninas
-                en piel de durazno, creadas para brindarte
-                comodidad y suavidad en cada noche.
-            </p>
-
-            <div class="hero-buttons">
-
-                <a href="#coleccion" class="btn btn-primary">
-                    Ver catálogo
-                </a>
-
-                <a href="https://wa.me/573229494731?text=Hola%20By%20Night%2C%20quiero%20conocer%20la%20colecci%C3%B3n%20de%20pijamas"
-                   class="btn btn-whatsapp"
-                   target="_blank"
-                   rel="noopener">
-                    Pedir por WhatsApp
-                </a>
-
-            </div>
-
-        </div>
-
-        <div class="hero-image">
-            <img src="img/logo.png" alt="By Night pijamas femeninas">
-        </div>
-
-    </div>
-</section>
-
-<section class="benefits">
-
-    <div class="container benefits-grid">
-
-        <div class="benefit">
-            <div class="benefit-icon">♡</div>
-            <div>
-                <h3>Suaves</h3>
-                <p>Piel de durazno agradable al tacto.</p>
-            </div>
-        </div>
-
-        <div class="benefit">
-            <div class="benefit-icon">☾</div>
-            <div>
-                <h3>Para descansar</h3>
-                <p>Diseñadas pensando en tus noches.</p>
-            </div>
-        </div>
-
-        <div class="benefit">
-            <div class="benefit-icon">✦</div>
-            <div>
-                <h3>Femeninas</h3>
-                <p>Diseños delicados y modernos.</p>
-            </div>
-        </div>
-
-        <div class="benefit">
-            <div class="benefit-icon">✓</div>
-            <div>
-                <h3>Compra fácil</h3>
-                <p>Realiza tu pedido por WhatsApp.</p>
-            </div>
-        </div>
-
-    </div>
-
-</section>
-
-<section class="products-section" id="coleccion">
-
-    <div class="container">
-
-        <div class="section-heading">
-
-            <span class="section-label">
-                CATÁLOGO BY NIGHT
-            </span>
-
-            <h2>Pijamas para sentirte cómoda</h2>
-
-            <p>
-                Elige tu diseño favorito y disfruta la suavidad
-                de la piel de durazno en cada noche.
-            </p>
-
-        </div>
-
-        <div class="product-filters">
-
-            <button class="filter-button active" data-category="todos">
-                Todas
-            </button>
-
-            <button class="filter-button" data-category="enterizas">
-                Enterizas
-            </button>
-
-            <button class="filter-button" data-category="short-top">
-                Short Top
-            </button>
-
-            <button class="filter-button" data-category="pantalon-camiseta">
-                Pantalón y Camiseta
-            </button>
-
-            <button class="filter-button" data-category="tres-piezas">
-                Tres Piezas
-            </button>
-
-        </div>
-
-        <div class="products-grid" id="productsGrid">
-
-            <!-- PRODUCTO 1 -->
-
-            <article class="product-card" data-category="enterizas">
-
-                <div class="product-image">
-
-                    <span class="product-badge">
-                        Nueva
-                    </span>
-
-                    <img src="img/1.jpeg"
-                         alt="Pijama Vaca">
-
-                    <button class="quick-cart"
-                            data-id="1"
-                            aria-label="Agregar Pijama Vaca">
-                        +
-                    </button>
-
-                </div>
-
-                <div class="product-info">
-
-                    <span class="product-category">
-                        Pijama Enteriza
-                    </span>
-
-                    <h3>Pijama Vaca</h3>
-
-                    <p class="product-description">
-                        Pijama femenina de piel de durazno,
-                        suave y ligera.
-                    </p>
-
-                    <div class="product-bottom">
-
-                        <strong>$45.000</strong>
-
-                        <button class="add-cart"
-                                data-id="1">
-                            Agregar
-                        </button>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-
-            <!-- PRODUCTO 2 -->
-
-            <article class="product-card" data-category="enterizas">
-
-                <div class="product-image">
-
-                    <img src="img/2.jpeg"
-                         alt="Pijama Snoopy">
-
-                    <button class="quick-cart"
-                            data-id="2"
-                            aria-label="Agregar Pijama Snoopy">
-                        +
-                    </button>
-
-                </div>
-
-                <div class="product-info">
-
-                    <span class="product-category">
-                        Pijama Enteriza
-                    </span>
-
-                    <h3>Pijama Snoopy</h3>
-
-                    <p class="product-description">
-                        Diseño delicado con una textura
-                        suave y confortable.
-                    </p>
-
-                    <div class="product-bottom">
-
-                        <strong>$45.000</strong>
-
-                        <button class="add-cart"
-                                data-id="2">
-                            Agregar
-                        </button>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-
-            <!-- PRODUCTO 3 -->
-
-            <article class="product-card" data-category="tres-piezas">
-
-                <div class="product-image">
-
-                    <span class="product-badge">
-                        Favorita
-                    </span>
-
-                    <img src="img/3.jpeg"
-                         alt="Pijama Cherry">
-
-                    <button class="quick-cart"
-                            data-id="3"
-                            aria-label="Agregar Pijama Cherry">
-                        +
-                    </button>
-
-                </div>
-
-                <div class="product-info">
-
-                    <span class="product-category">
-                        Pijama pantalón y blusa
-                    </span>
-
-                    <h3>Pijama Cherry</h3>
-
-                    <p class="product-description">
-                        Pijama de piel de durazno con
-                        diseño femenino.
-                    </p>
-
-                    <div class="product-bottom">
-
-                        <strong>$70.000</strong>
-
-                        <button class="add-cart"
-                                data-id="3">
-                            Agregar
-                        </button>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-
-            <!-- PRODUCTO 4 -->
-
-            <article class="product-card" data-category="tres-piezas">
-
-                <div class="product-image">
-
-                    <img src="img/4.jpeg"
-                         alt="Pijama Love">
-
-                    <button class="quick-cart"
-                            data-id="4"
-                            aria-label="Agregar Pijama Love">
-                        +
-                    </button>
-
-                </div>
-
-                <div class="product-info">
-
-                    <span class="product-category">
-                        Pijama pantalón y blusa
-                    </span>
-
-                    <h3>Pijama Love</h3>
-
-                    <p class="product-description">
-                        Pijama de piel de durazno con
-                        diseño femenino.
-                    </p>
-
-                    <div class="product-bottom">
-
-                        <strong>$70.000</strong>
-
-                        <button class="add-cart"
-                                data-id="4">
-                            Agregar
-                        </button>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-
-            <!-- PRODUCTO 5 -->
-
-            <article class="product-card" data-category="short-top">
-
-                <div class="product-image">
-
-                    <img src="img/5.jpeg"
-                         alt="Pijama Pucca">
-
-                    <button class="quick-cart"
-                            data-id="5"
-                            aria-label="Agregar Pijama Pucca">
-                        +
-                    </button>
-
-                </div>
-
-                <div class="product-info">
-
-                    <span class="product-category">
-                        Short Top
-                    </span>
-
-                    <h3>Pijama Pucca</h3>
-
-                    <p class="product-description">
-                        Pijama juvenil de piel de durazno
-                        con diseño moderno.
-                    </p>
-
-                    <div class="product-bottom">
-
-                        <strong>$45.000</strong>
-
-                        <button class="add-cart"
-                                data-id="5">
-                            Agregar
-                        </button>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-
-            <!-- PRODUCTO 6 -->
-
-            <article class="product-card" data-category="pantalon-camiseta">
-
-                <div class="product-image">
-
-                    <img src="img/6.jpeg"
-                         alt="Pijama Osito">
-
-                    <button class="quick-cart"
-                            data-id="6"
-                            aria-label="Agregar Pijama Osito">
-                        +
-                    </button>
-
-                </div>
-
-                <div class="product-info">
-
-                    <span class="product-category">
-                        Pantalón y Camiseta
-                    </span>
-
-                    <h3>Pijama Osito</h3>
-
-                    <p class="product-description">
-                        Un diseño clásico y versátil
-                        para cualquier noche.
-                    </p>
-
-                    <div class="product-bottom">
-
-                        <strong>$65.000</strong>
-
-                        <button class="add-cart"
-                                data-id="6">
-                            Agregar
-                        </button>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<section class="about-section" id="nosotros">
-
-    <div class="container about-content">
-
-        <div class="about-image">
-
-            <img src="img/logo.png"
-                 alt="Colección de pijamas By Night">
-
-        </div>
-
-        <div class="about-text">
-
-            <span class="section-label">
-                SOBRE BY NIGHT
-            </span>
-
-            <h2>
-                Tu momento favorito del día también puede ser la noche
-            </h2>
-
-            <p>
-                En By Night creemos que descansar también es
-                una forma de consentirte. Por eso creamos una
-                colección de pijamas femeninas en piel de durazno,
-                pensadas para acompañarte con suavidad,
-                comodidad y estilo.
-            </p>
-
-            <p>
-                Elige tu diseño favorito y haz de cada noche
-                un momento especial.
-            </p>
-
-            <a href="#coleccion" class="btn btn-primary">
-                Ver pijamas
+            <a href="#inicio" class="logo">
+                <span class="logo-main">By Night</span>
+                <span class="logo-sub">Pijamas femeninas</span>
             </a>
 
+            <nav class="nav" id="nav">
+
+                <a href="#inicio" class="active">
+                    Inicio
+                </a>
+
+                <a href="catalogo.html">
+                    Catálogo
+                </a>
+
+                <a href="#nosotros">
+                    Nosotras
+                </a>
+
+                <a href="#contacto">
+                    Contacto
+                </a>
+
+            </nav>
+
+            <div class="header-actions">
+
+                <button class="cart-button" id="openCart" aria-label="Abrir carrito">
+
+                    <span class="cart-icon">🛍</span>
+
+                    <span class="cart-text">
+                        Carrito
+                    </span>
+
+                    <span class="cart-count" id="cartCount">
+                        0
+                    </span>
+
+                </button>
+
+                <button class="menu-button" id="menuButton" aria-label="Abrir menú">
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                </button>
+
+            </div>
+
         </div>
 
+    </header>
+
+
+    <main>
+
+        <section class="hero">
+
+            <div class="container hero-content">
+
+                <div class="hero-text">
+
+                    <span class="hero-label">
+                        BY NIGHT
+                    </span>
+
+                    <h1>
+                        Suavidad que
+                        <strong>acompaña tus noches.</strong>
+                    </h1>
+
+                    <p>
+                        Descubre nuestra colección de pijamas femeninas
+                        en piel de durazno, creadas para brindarte
+                        comodidad y suavidad en cada noche.
+                    </p>
+
+                    <div class="hero-buttons">
+
+                        <a href="catalogo.html" class="btn btn-primary">
+                            Ver catálogo
+                        </a>
+
+                        <a href="https://wa.me/573229494731?text=Hola%20By%20Night%2C%20quiero%20conocer%20la%20colecci%C3%B3n%20de%20pijamas"
+                            class="btn btn-whatsapp" target="_blank" rel="noopener">
+                            Pedir por WhatsApp
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="hero-image">
+
+                    <img src="img/logo.png" alt="By Night pijamas femeninas">
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- BENEFICIOS -->
+
+        <section class="benefits">
+
+            <div class="container benefits-grid">
+
+                <div class="benefit">
+
+                    <div class="benefit-icon">
+                        ♡
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Suaves
+                        </h3>
+
+                        <p>
+                            Piel de durazno agradable al tacto.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="benefit">
+
+                    <div class="benefit-icon">
+                        ☾
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Para descansar
+                        </h3>
+
+                        <p>
+                            Diseñadas pensando en tus noches.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="benefit">
+
+                    <div class="benefit-icon">
+                        ✦
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Femeninas
+                        </h3>
+
+                        <p>
+                            Diseños delicados y modernos.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="benefit">
+
+                    <div class="benefit-icon">
+                        ✓
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Compra fácil
+                        </h3>
+
+                        <p>
+                            Realiza tu pedido por WhatsApp.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="products-section" id="coleccion">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span class="section-label">
+                        CATÁLOGO BY NIGHT
+                    </span>
+
+                    <h2>
+                        Pijamas para sentirte cómoda
+                    </h2>
+
+                    <p>
+                        Elige tu diseño favorito y disfruta la suavidad
+                        de la piel de durazno en cada noche.
+                    </p>
+
+                </div>
+                <div class="product-filters">
+
+                    <button class="filter-button active" data-category="todos">
+                        Todas
+                    </button>
+
+                    <button class="filter-button" data-category="enterizas">
+                        Enterizas
+                    </button>
+
+                    <button class="filter-button" data-category="tres-piezas">
+                        Tres piezas
+                    </button>
+
+                    <button class="filter-button" data-category="capri">
+                        Capri
+                    </button>
+
+                    <button class="filter-button" data-category="cuatro-piezas">
+                        Cuatro piezas
+                    </button>
+
+                    <button class="filter-button" data-category="shorts-top">
+                        Shorts top
+                    </button>
+
+                    <button class="filter-button" data-category="batas">
+                        Batas
+                    </button>
+
+                    <button class="filter-button" data-category="niños">
+                        Niños
+                    </button>
+
+                </div>
+
+                <div class="products-grid" id="productsGrid">
+
+
+                 
+
+                    <article class="product-card" data-category="enterizas">
+
+                        <div class="product-image">
+
+                            <span class="product-badge">
+                                Nueva
+                            </span>
+
+                            <img src="img/1.jpeg" alt="Pijama Vaca">
+
+                            <button class="quick-cart" data-id="1" aria-label="Agregar Pijama Vaca">
+                                +
+                            </button>
+
+                        </div>
+
+
+                        <div class="product-info">
+
+                            <span class="product-category">
+                                Enteriza
+                            </span>
+
+                            <h3>
+                                Pijama Vaca
+                            </h3>
+
+                            <p class="product-description">
+                                Pijama femenina de piel de durazno,
+                                suave y ligera.
+                            </p>
+
+                            <div class="product-bottom">
+
+                                <strong>
+                                    $45.000
+                                </strong>
+
+                                <button class="add-cart" data-id="1">
+                                    Agregar
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- PRODUCTO 2 -->
+
+                    <article class="product-card" data-category="enterizas">
+
+                        <div class="product-image">
+
+                            <img src="img/2.jpeg" alt="Pijama Snoopy">
+
+                            <button class="quick-cart" data-id="2" aria-label="Agregar Pijama Snoopy">
+                                +
+                            </button>
+
+                        </div>
+
+
+                        <div class="product-info">
+
+                            <span class="product-category">
+                                Enteriza
+                            </span>
+
+                            <h3>
+                                Pijama Snoopy
+                            </h3>
+
+                            <p class="product-description">
+                                Diseño delicado con una textura
+                                suave y confortable.
+                            </p>
+
+                            <div class="product-bottom">
+
+                                <strong>
+                                    $45.000
+                                </strong>
+
+                                <button class="add-cart" data-id="2">
+                                    Agregar
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- PRODUCTO 3 -->
+
+                    <article class="product-card" data-category="tres-piezas">
+
+                        <div class="product-image">
+
+                            <span class="product-badge">
+                                Favorita
+                            </span>
+
+                            <img src="img/3.jpeg" alt="Pijama Cherry">
+
+                            <button class="quick-cart" data-id="3" aria-label="Agregar Pijama Cherry">
+                                +
+                            </button>
+
+                        </div>
+
+
+                        <div class="product-info">
+
+                            <span class="product-category">
+                                Tres piezas
+                            </span>
+
+                            <h3>
+                                Pijama Cherry
+                            </h3>
+
+                            <p class="product-description">
+                                Pijama de piel de durazno con
+                                diseño femenino.
+                            </p>
+
+                            <div class="product-bottom">
+
+                                <strong>
+                                    $70.000
+                                </strong>
+
+                                <button class="add-cart" data-id="3">
+                                    Agregar
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- PRODUCTO 4 -->
+
+                    <article class="product-card" data-category="tres-piezas">
+
+                        <div class="product-image">
+
+                            <img src="img/4.jpeg" alt="Pijama Love">
+
+                            <button class="quick-cart" data-id="4" aria-label="Agregar Pijama Love">
+                                +
+                            </button>
+
+                        </div>
+
+
+                        <div class="product-info">
+
+                            <span class="product-category">
+                                Tres piezas
+                            </span>
+
+                            <h3>
+                                Pijama Love
+                            </h3>
+
+                            <p class="product-description">
+                                Pijama de piel de durazno con
+                                diseño femenino.
+                            </p>
+
+                            <div class="product-bottom">
+
+                                <strong>
+                                    $70.000
+                                </strong>
+
+                                <button class="add-cart" data-id="4">
+                                    Agregar
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- PRODUCTO 5 -->
+
+                    <article class="product-card" data-category="shorts-top">
+
+                        <div class="product-image">
+
+                            <img src="img/5.jpeg" alt="Pijama Pucca">
+
+                            <button class="quick-cart" data-id="5" aria-label="Agregar Pijama Pucca">
+                                +
+                            </button>
+
+                        </div>
+
+
+                        <div class="product-info">
+
+                            <span class="product-category">
+                                Shorts top
+                            </span>
+
+                            <h3>
+                                Pijama Pucca
+                            </h3>
+
+                            <p class="product-description">
+                                Pijama juvenil de piel de durazno
+                                con diseño moderno.
+                            </p>
+
+                            <div class="product-bottom">
+
+                                <strong>
+                                    $45.000
+                                </strong>
+
+                                <button class="add-cart" data-id="5">
+                                    Agregar
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- PRODUCTO 6 -->
+
+                    <article class="product-card" data-category="capri">
+
+                        <div class="product-image">
+
+                            <img src="img/6.jpeg" alt="Pijama Osito">
+
+                            <button class="quick-cart" data-id="6" aria-label="Agregar Pijama Osito">
+                                +
+                            </button>
+
+                        </div>
+
+
+                        <div class="product-info">
+
+                            <span class="product-category">
+                                Capri
+                            </span>
+
+                            <h3>
+                                Pijama Osito
+                            </h3>
+
+                            <p class="product-description">
+                                Un diseño clásico y versátil
+                                para cualquier noche.
+                            </p>
+
+                            <div class="product-bottom">
+
+                                <strong>
+                                    $65.000
+                                </strong>
+
+                                <button class="add-cart" data-id="6">
+                                    Agregar
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- NOSOTRAS -->
+
+        <section class="about-section" id="nosotros">
+
+            <div class="container about-content">
+
+                <div class="about-image">
+
+                    <img src="img/logo.png" alt="Colección de pijamas By Night">
+
+                </div>
+
+
+                <div class="about-text">
+
+                    <span class="section-label">
+                        SOBRE BY NIGHT
+                    </span>
+
+                    <h2>
+                        Tu momento favorito del día también puede ser la noche
+                    </h2>
+
+                    <p>
+                        En By Night creemos que descansar también es
+                        una forma de consentirte. Por eso creamos una
+                        colección de pijamas femeninas en piel de durazno,
+                        pensadas para acompañarte con suavidad,
+                        comodidad y estilo.
+                    </p>
+
+                    <p>
+                        Elige tu diseño favorito y haz de cada noche
+                        un momento especial.
+                    </p>
+
+                    <a href="#coleccion" class="btn btn-primary">
+                        Ver pijamas
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- LLAMADO A LA ACCIÓN -->
+
+        <section class="cta-section">
+
+            <div class="container cta-content">
+
+                <span class="section-label">
+                    BY NIGHT
+                </span>
+
+                <h2>
+                    ¿Ya encontraste tu pijama favorita?
+                </h2>
+
+                <p>
+                    Escríbenos y realiza tu pedido de manera rápida
+                    y sencilla.
+                </p>
+
+                <a href="https://wa.me/573229494731?text=Hola%20By%20Night%2C%20quiero%20hacer%20un%20pedido"
+                    class="btn btn-whatsapp" target="_blank" rel="noopener">
+                    Comprar por WhatsApp
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer class="footer" id="contacto">
+
+        <div class="container footer-grid">
+
+
+            <div class="footer-brand">
+
+                <span class="logo-main">
+                    By Night
+                </span>
+
+                <p>
+                    Pijamas femeninas de piel de durazno
+                    para noches llenas de comodidad.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <h3>
+                    Tienda
+                </h3>
+
+                <a href="#coleccion">
+                    Colección
+                </a>
+
+                <a href="#nosotros">
+                    Nosotras
+                </a>
+
+                <a href="#contacto">
+                    Contacto
+                </a>
+
+            </div>
+
+
+            <div class="footer-contact">
+
+                <h3>
+                    Contáctanos
+                </h3>
+
+                <a href="https://wa.me/573229494731" target="_blank" rel="noopener">
+                    WhatsApp
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 By Night. Todos los derechos reservados.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- CARRITO -->
+
+    <div class="cart-overlay" id="cartOverlay">
     </div>
 
-</section>
+
+    <aside class="cart-panel" id="cartPanel">
+
+        <div class="cart-header">
+
+            <div>
+
+                <span class="section-label">
+                    BY NIGHT
+                </span>
+
+                <h2>
+                    Tu carrito
+                </h2>
+
+            </div>
+
+            <button class="close-cart" id="closeCart" aria-label="Cerrar carrito">
+                ×
+            </button>
+
+        </div>
 
 
-<section class="cta-section">
+        <div class="cart-items" id="cartItems">
 
-    <div class="container cta-content">
+            <div class="empty-cart">
 
-        <span class="section-label">
-            BY NIGHT
+                <span>
+                    🛍
+                </span>
+
+                <h3>
+                    Tu carrito está vacío
+                </h3>
+
+                <p>
+                    Agrega una pijama para comenzar tu compra.
+                </p>
+
+                <button class="btn btn-primary" id="continueShopping">
+                    Ver catálogo
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div class="cart-footer">
+
+            <div class="cart-total">
+
+                <span>
+                    Total
+                </span>
+
+                <strong id="cartTotal">
+                    $0
+                </strong>
+
+            </div>
+
+
+            <div class="payment-actions">
+                <a href="#" class="checkout-whatsapp" id="checkoutWhatsapp" target="_blank" rel="noopener">
+                    WhatsApp
+                </a>
+
+                <button type="button" class="checkout-nequi" id="checkoutNequi">
+                    Nequi
+                </button>
+            </div>
+
+        </div>
+
+    </aside>
+
+    <div class="nequi-modal" id="nequiModal" aria-hidden="true">
+        <div class="nequi-backdrop" id="nequiBackdrop"></div>
+
+        <div class="nequi-panel" role="dialog" aria-modal="true" aria-labelledby="nequiTitle">
+            <div class="nequi-header">
+                <h3 id="nequiTitle">Paga con Nequi</h3>
+                <button type="button" class="nequi-close" id="nequiClose" aria-label="Cerrar pago por Nequi">×</button>
+            </div>
+
+            <div class="nequi-body">
+                <div class="nequi-brand" aria-hidden="true">
+                    <span class="nequi-brand-mark">N</span>
+                    <span>Nequi</span>
+                </div>
+
+                <p class="nequi-intro">
+                    Realiza tu transferencia y envíanos el comprobante para confirmar tu pedido.
+                </p>
+
+                <div class="nequi-pay-info">
+                    <div class="nequi-payment-row">
+                        <span>Total</span>
+                        <strong id="nequiTotal">$0</strong>
+                    </div>
+
+                    <div class="nequi-payment-row">
+                        <span>Celular Nequi</span>
+                        <div class="nequi-number">
+                            <strong id="nequiPhone">3001234567</strong>
+                            <button type="button" class="copy-nequi" id="copyNequi">Copiar número</button>
+                        </div>
+                    </div>
+                </div>
+
+                <ol class="nequi-steps">
+                    <li>Abre Nequi y envía el total indicado.</li>
+                    <li>Guarda el comprobante de la transferencia.</li>
+                    <li>Confirma el pago por WhatsApp.</li>
+                </ol>
+
+                <div class="nequi-actions">
+                          <a href="#"
+                       class="nequi-action primary"
+                              id="nequiConfirm"
+                       target="_blank"
+                       rel="noopener">
+                        Confirmar pago
+                    </a>
+
+                    <button type="button" class="nequi-action secondary" id="nequiCancel">
+                        Cerrar
+                    </button>
+                </div>
+
+                <p class="nequi-note">
+                    Envía el comprobante por WhatsApp después de realizar el pago.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <a href="https://wa.me/573229494731?text=Hola%20By%20Night%2C%20quiero%20informaci%C3%B3n%20sobre%20sus%20pijamas"
+        class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+
+        <span>
+            WhatsApp
         </span>
 
-        <h2>
-            ¿Ya encontraste tu pijama favorita?
-        </h2>
-
-        <p>
-            Escríbenos y realiza tu pedido de manera rápida
-            y sencilla.
-        </p>
-
-        <a href="https://wa.me/573229494731?text=Hola%20By%20Night%2C%20quiero%20hacer%20un%20pedido"
-           class="btn btn-whatsapp"
-           target="_blank"
-           rel="noopener">
-            Comprar por WhatsApp
-        </a>
-
-    </div>
-
-</section>
-
-</main>
+    </a>
 
 
-<footer class="footer" id="contacto">
-
-    <div class="container footer-grid">
-
-        <div class="footer-brand">
-
-            <span class="logo-main">
-                By Night
-            </span>
-
-            <p>
-                Pijamas femeninas de piel de durazno
-                para noches llenas de comodidad.
-            </p>
-
-        </div>
-
-        <div class="footer-links">
-
-            <h3>Tienda</h3>
-
-            <a href="#coleccion">
-                Colección
-            </a>
-
-            <a href="#nosotros">
-                Nosotras
-            </a>
-
-            <a href="#contacto">
-                Contacto
-            </a>
-
-        </div>
-
-        <div class="footer-contact">
-
-            <h3>Contáctanos</h3>
-
-            <a href="https://wa.me/573229494731"
-               target="_blank"
-               rel="noopener">
-                WhatsApp
-            </a>
-
-        </div>
-
-    </div>
-
-    <div class="footer-bottom">
-
-        <p>
-            © 2026 By Night. Todos los derechos reservados.
-        </p>
-
-    </div>
-
-</footer>
-
-
-<!-- CARRITO -->
-
-<div class="cart-overlay" id="cartOverlay"></div>
-
-<aside class="cart-panel" id="cartPanel">
-
-    <div class="cart-header">
-
-        <div>
-
-            <span class="section-label">
-                BY NIGHT
-            </span>
-
-            <h2>
-                Tu carrito
-            </h2>
-
-        </div>
-
-        <button class="close-cart"
-                id="closeCart"
-                aria-label="Cerrar carrito">
-            ×
-        </button>
-
-    </div>
-
-
-    <div class="cart-items" id="cartItems">
-
-        <div class="empty-cart">
-
-            <span>🛍</span>
-
-            <h3>
-                Tu carrito está vacío
-            </h3>
-
-            <p>
-                Agrega una pijama para comenzar tu compra.
-            </p>
-
-            <button class="btn btn-primary"
-                    id="continueShopping">
-                Ver colección
-            </button>
-
-        </div>
-
-    </div>
-
-
-    <div class="cart-footer">
-
-        <div class="cart-total">
-
-            <span>
-                Total
-            </span>
-
-            <strong id="cartTotal">
-                $0
-            </strong>
-
-        </div>
-
-        <a href="#"
-           class="checkout-whatsapp"
-           id="checkoutWhatsapp"
-           target="_blank"
-           rel="noopener">
-            Finalizar pedido por WhatsApp
-        </a>
-
-    </div>
-
-</aside>
-
-
-
-<a href="https://wa.me/573229494731?text=Hola%20By%20Night%2C%20quiero%20informaci%C3%B3n%20sobre%20sus%20pijamas"
-   class="whatsapp-float"
-   target="_blank"
-   rel="noopener"
-   aria-label="Contactar por WhatsApp">
-
-    <span>
-        WhatsApp
-    </span>
-
-</a>
-
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 
 </body>
+
 </html>
+```
