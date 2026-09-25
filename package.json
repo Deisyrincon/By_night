@@ -1,0 +1,19 @@
+{
+  "name": "by-night",
+  "version": "1.0.0",
+  "description": "By Night - Pijamas femeninas en piel de durazno, suaves, cómodas y perfectas para descansar.",
+  "private": true,
+  "scripts": {
+    "dev": "python3 -m http.server 8000",
+    "lint": "echo 'No linter configured for static HTML project'"
+  },
+  "keywords": [
+    "pijamas",
+    "e-commerce",
+    "static-site"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {},
+  "dependencies": {}
+}
