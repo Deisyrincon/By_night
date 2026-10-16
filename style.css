@@ -1022,7 +1022,8 @@ img {
     margin-top: 14px;
 }
 
-.checkout-nequi {
+.checkout-nequi,
+.checkout-wompi {
     flex: 1;
     min-height: 52px;
     display: flex;
@@ -1038,14 +1039,94 @@ img {
     transition: 0.3s;
 }
 
-.checkout-nequi:hover {
+.checkout-nequi:hover,
+.checkout-wompi:hover {
     transform: translateY(-2px);
     box-shadow: 0 8px 20px rgba(106, 44, 255, 0.22);
+}
+
+.checkout-wompi:disabled {
+    cursor: wait;
+    opacity: 0.7;
+    transform: none;
 }
 
 .cart-footer .payment-actions {
     display: grid;
     grid-template-columns: 1fr 1fr;
+}
+
+.payment-help,
+.payment-message {
+    margin-top: 8px;
+    color: var(--text-light);
+    font-size: 11px;
+    text-align: center;
+}
+
+.payment-message {
+    color: var(--rose-dark);
+}
+
+.payment-result-section {
+    min-height: 65vh;
+    display: grid;
+    place-items: center;
+    padding: 60px 20px;
+}
+
+.payment-result-card {
+    width: min(520px, 100%);
+    padding: 38px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    background: var(--white);
+    box-shadow: var(--shadow);
+    text-align: center;
+}
+
+.payment-result-card h1 {
+    margin-bottom: 12px;
+    font-family: "Playfair Display", serif;
+    font-size: clamp(28px, 5vw, 38px);
+}
+
+.payment-result-card p {
+    color: var(--text-light);
+}
+
+.payment-result-status {
+    display: block;
+    margin: 18px 0;
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.payment-result-card[data-state="approved"] .payment-result-status {
+    color: #247a48;
+}
+
+.payment-result-card[data-state="declined"] .payment-result-status,
+.payment-result-card[data-state="error"] .payment-result-status {
+    color: var(--rose-dark);
+}
+
+.payment-result-link {
+    display: inline-flex;
+    min-height: 48px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 22px;
+    padding: 0 24px;
+    border-radius: 30px;
+    background: var(--rose-dark);
+    color: var(--white);
+    font-weight: 700;
+}
+
+.payment-whatsapp {
+    margin-right: 8px;
+    background: var(--green);
 }
 
 .checkout-details {

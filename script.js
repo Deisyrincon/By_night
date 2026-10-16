@@ -2,189 +2,189 @@ const products = [
     {
         id: 1,
         name: "Pijama Vaca",
-        price: 45000,
+        price: 38000,
         image: "img/1.jpeg",
         category: "enterizas"
     },
     {
         id: 2,
         name: "Pijama Snoopy",
-        price: 45000,
+        price: 38000,
         image: "img/2.jpeg",
         category: "enterizas"
     },
     {
         id: 3,
         name: "Pijama Cherry",
-        price: 70000,
+        price: 38000,
         image: "img/3.jpeg",
         category: "tres-piezas"
     },
     {
         id: 4,
         name: "Pijama Love",
-        price: 70000,
+        price: 38000,
         image: "img/4.jpeg",
         category: "tres-piezas"
     },
     {
         id: 5,
         name: "Pijama Pucca",
-        price: 45000,
+        price: 38000,
         image: "img/5.jpeg",
         category: "shorts-top"
     },
     {
         id: 6,
         name: "Pijama Osito",
-        price: 65000,
+        price: 38000,
         image: "img/6.jpeg",
         category: "capri"
     },
     {
         id: 7,
         name: "Pijama Luna",
-        price: 60000,
+        price: 38000,
         image: "img/7.jpeg",
         category: "enterizas"
     },
     {
         id: 8,
         name: "Pijama Corazones",
-        price: 65000,
+        price: 40000,
         image: "img/8.jpeg",
-        category: "enterizas"
+        category: "tres-piezas"
     },
     {
         id: 9,
         name: "Pijama Floral",
-        price: 68000,
+        price: 40000,
         image: "img/9.jpeg",
-        category: "enterizas"
+        category: "tres-piezas"
     },
     {
         id: 10,
         name: "Pijama Estrellas",
-        price: 62000,
+        price: 40000,
         image: "img/10.jpeg",
-        category: "enterizas"
+        category: "tres-piezas"
     },
     {
         id: 11,
         name: "Pijama Dulce",
-        price: 65000,
+        price: 40000,
         image: "img/11.jpeg",
-        category: "enterizas"
+        category: "tres-piezas"
     },
     {
         id: 12,
         name: "Pijama Rosada",
-        price: 60000,
+        price: 40000,
         image: "img/12.jpeg",
         category: "tres-piezas"
     },
     {
         id: 13,
         name: "Pijama Celeste",
-        price: 65000,
+        price: 40000,
         image: "img/13.jpeg",
         category: "tres-piezas"
     },
     {
         id: 14,
         name: "Pijama Fresas",
-        price: 70000,
+        price: 32000,
         image: "img/14.jpeg",
         category: "tres-piezas"
     },
     {
         id: 15,
         name: "Pijama Gatito",
-        price: 68000,
+        price: 32000,
         image: "img/15.jpeg",
         category: "tres-piezas"
     },
     {
         id: 16,
         name: "Pijama Nubes",
-        price: 65000,
+        price: 32000,
         image: "img/16.jpeg",
         category: "tres-piezas"
     },
     {
         id: 17,
         name: "Pijama Cereza",
-        price: 70000,
+        price: 32000,
         image: "img/17.jpeg",
         category: "tres-piezas"
     },
     {
         id: 18,
         name: "Pijama Mariposas",
-        price: 68000,
+        price: 32000,
         image: "img/18.jpeg",
         category: "tres-piezas"
     },
     {
         id: 19,
         name: "Pijama Love Pink",
-        price: 62000,
+        price: 32000,
         image: "img/19.jpeg",
         category: "capri"
     },
     {
         id: 20,
         name: "Pijama Snoopy Rosa",
-        price: 65000,
+        price: 32000,
         image: "img/20.jpeg",
         category: "capri"
     },
     {
         id: 21,
         name: "Pijama Oso",
-        price: 60000,
+        price: 32000,
         image: "img/21.jpeg",
         category: "capri"
     },
     {
         id: 22,
         name: "Pijama Flores",
-        price: 65000,
+        price: 42000,
         image: "img/22.jpeg",
         category: "capri"
     },
     {
         id: 23,
         name: "Pijama Cherry Pink",
-        price: 68000,
+        price: 42000,
         image: "img/23.jpeg",
         category: "capri"
     },
     {
         id: 24,
         name: "Pijama Corazón",
-        price: 62000,
+        price: 42000,
         image: "img/24.jpeg",
         category: "capri"
     },
     {
         id: 25,
         name: "Pijama Dream",
-        price: 65000,
+        price: 42000,
         image: "img/25.jpeg",
         category: "capri"
     },
     {
         id: 26,
         name: "Pijama Violeta",
-        price: 70000,
+        price: 42000,
         image: "img/26.jpeg",
         category: "cuatro-piezas"
     },
     {
         id: 27,
         name: "Pijama Cute",
-        price: 68000,
+        price: 42000,
         image: "img/27.jpeg",
         category: "cuatro-piezas"
     },
@@ -226,56 +226,56 @@ const products = [
     {
         id: 33,
         name: "Pijama Sweet",
-        price: 50000,
+        price: 32000,
         image: "img/33.jpeg",
         category: "shorts-top"
     },
     {
         id: 34,
         name: "Pijama Blossom",
-        price: 55000,
+        price: 32000,
         image: "img/34.jpeg",
         category: "shorts-top"
     },
     {
         id: 35,
         name: "Pijama Candy",
-        price: 45000,
+        price: 32000,
         image: "img/35.jpeg",
         category: "shorts-top"
     },
     {
         id: 36,
         name: "Pijama Soft",
-        price: 50000,
+        price: 32000,
         image: "img/36.jpeg",
         category: "shorts-top"
     },
     {
         id: 37,
         name: "Pijama Dreamy",
-        price: 55000,
+        price: 32000,
         image: "img/37.jpeg",
         category: "shorts-top"
     },
     {
         id: 38,
         name: "Bata Rosada",
-        price: 65000,
+        price: 32000,
         image: "img/38.jpeg",
         category: "batas"
     },
     {
         id: 39,
         name: "Bata Celeste",
-        price: 65000,
+        price: 32000,
         image: "img/39.jpeg",
         category: "batas"
     },
     {
         id: 40,
         name: "By Night Premium",
-        price: 100000,
+        price: 32000,
         image: "img/39.jpeg",
         category: "batas"
     }
@@ -317,7 +317,9 @@ const cartCount = document.getElementById("cartCount");
 const cartTotal = document.getElementById("cartTotal");
 
 const checkoutWhatsapp = document.getElementById("checkoutWhatsapp");
+const checkoutWompi = document.getElementById("checkoutWompi");
 const checkoutNequi = document.getElementById("checkoutNequi");
+const paymentMessage = document.getElementById("paymentMessage");
 const nequiConfirm = document.getElementById("nequiConfirm");
 const checkoutCustomerForm = document.getElementById("checkoutCustomerForm");
 
@@ -970,6 +972,110 @@ if (checkoutNequi) {
         }
     );
 }
+
+/* Pasarela Wompi desactivada temporalmente.
+function showPaymentMessage(message) {
+    if (paymentMessage) {
+        paymentMessage.textContent = message;
+    }
+}
+
+function submitWompiCheckout(payment) {
+    try {
+        sessionStorage.setItem("wompiReference", payment.reference);
+        sessionStorage.setItem("wompiOrder", JSON.stringify({
+            amountInCents: payment.amountInCents,
+            customer: getCheckoutCustomerDetails(),
+            items: cart.map(item => ({
+                name: item.name,
+                quantity: item.quantity
+            })),
+            reference: payment.reference
+        }));
+    } catch (error) {
+        throw new Error("No fue posible preparar el pago. Habilita el almacenamiento del navegador e inténtalo de nuevo.");
+    }
+
+    const form = document.createElement("form");
+    form.method = "GET";
+    form.action = "https://checkout.wompi.co/p/";
+
+    const fields = {
+        "public-key": payment.publicKey,
+        currency: payment.currency,
+        "amount-in-cents": String(payment.amountInCents),
+        reference: payment.reference,
+        "signature:integrity": payment.signature,
+        "redirect-url": payment.redirectUrl,
+        "collect-shipping": "true"
+    };
+    const customer = getCheckoutCustomerDetails();
+
+    if (customer?.name) {
+        fields["customer-data:full-name"] = customer.name;
+    }
+
+    Object.entries(fields).forEach(([name, value]) => {
+        const input = document.createElement("input");
+        input.type = "hidden";
+        input.name = name;
+        input.value = value;
+        form.appendChild(input);
+    });
+
+    document.body.appendChild(form);
+    form.submit();
+}
+
+if (checkoutWompi) {
+    checkoutWompi.addEventListener("click", async event => {
+        event.preventDefault();
+        showPaymentMessage("");
+
+        if (cart.length === 0) {
+            showPaymentMessage("Agrega al menos un producto al carrito antes de pagar.");
+            return;
+        }
+
+        if (!validateCheckoutCustomer()) {
+            return;
+        }
+
+        checkoutWompi.disabled = true;
+        checkoutWompi.textContent = "Conectando con Wompi…";
+
+        try {
+            const response = await fetch("/api/wompi/checkout", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    items: cart.map(item => ({
+                        id: item.id,
+                        quantity: item.quantity
+                    }))
+                })
+            });
+            const result = await response.json();
+
+            if (!response.ok) {
+                throw new Error(result.error || "No se pudo iniciar el pago.");
+            }
+
+            submitWompiCheckout(result);
+        } catch (error) {
+            showPaymentMessage(
+                error instanceof Error
+                    ? error.message
+                    : "No se pudo iniciar el pago. Inténtalo de nuevo."
+            );
+            checkoutWompi.disabled = false;
+            checkoutWompi.textContent = "Pagar con Wompi";
+        }
+    });
+}
+*/
 
 if (checkoutCustomerForm) {
     checkoutCustomerForm.addEventListener("input", () => {

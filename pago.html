@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>Estado del pago | By Night</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="pago.js" defer></script>
+</head>
+<body>
+    <main class="payment-result-section">
+        <section class="payment-result-card" id="paymentResult" data-state="pending" aria-live="polite">
+            <h1>Estado de tu pago</h1>
+            <strong class="payment-result-status" id="paymentStatus">Verificando con Wompi…</strong>
+            <p id="paymentMessage">Estamos consultando el estado directamente con Wompi.</p>
+            <p id="paymentAmount"></p>
+            <a class="payment-result-link payment-whatsapp" id="paymentWhatsapp" href="#" target="_blank" rel="noopener" hidden>
+                Confirmar pedido por WhatsApp
+            </a>
+            <a class="payment-result-link" href="index.html">Volver a la tienda</a>
+        </section>
+    </main>
+</body>
+</html>
